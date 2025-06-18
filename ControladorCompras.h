@@ -13,6 +13,7 @@ class ControladorCompras:public IControladorCompras {
 public:
     ControladorCompras();
     virtual ~ControladorCompras();
+    void agregarProducto(string &CodProd, int Cantidad);
 private:
     IDictionary* Compras;
 };

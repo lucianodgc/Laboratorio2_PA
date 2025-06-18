@@ -11,7 +11,6 @@ class Compras: public ICollectible {
 public:
     Compras();
     virtual ~Compras();
-    void agregarProducto(string &CodProd, int Cantidad);
     Date getFCompra();
     float getMontoFinal();
 private:

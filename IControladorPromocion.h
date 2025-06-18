@@ -2,7 +2,6 @@
 #ifndef ICONTROLADORPROMOCION_H
 #define ICONTROLADORPROMOCION_H
 
-#include "Usuario.h"
 #include "DTpromocion.h"
 
 using namespace std;

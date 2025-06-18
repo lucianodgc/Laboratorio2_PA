@@ -5,9 +5,14 @@ Producto::Producto() {}
 
 Producto::~Producto() {}
 
-string Producto::getCodProd(){}
-string Producto::getNombre(){}
-float Producto::getPrecio(){}
-int Producto::getStock(){}
-string Producto::getDescripcion(){}
-Cat Producto::getCategoria(){}
+string Producto::getCodProd(){return CodProd;}
+
+string Producto::getNombre(){return Nombre;}
+
+float Producto::getPrecio(){return Precio;}
+
+int Producto::getStock(){return Stock;}
+
+string Producto::getDescripcion(){return Descripcion;}
+
+Cat Producto::getCategoria(){return Categoria;}
