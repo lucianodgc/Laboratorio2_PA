@@ -15,8 +15,8 @@ public:
     virtual ~Promocion();
     void agregarProducto(string CodProd, int Cantidad);
 private:
-	string nombre;
-    string descripcion;
+	string Nombre;
+    string Descripcion;
     Date FVencimiento;
     IDictionary* Productos;
     ICollection* PromocionProducto;

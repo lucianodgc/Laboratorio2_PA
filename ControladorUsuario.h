@@ -12,10 +12,13 @@ using namespace std;
 class ControladorUsuario:public IControladorUsuario {
 public:
     ControladorUsuario();
-    virtual ~ControladorUsuario();
+    void altaCliente(string Nombre, string Contraseña,Date FNacimiento,
+    DataDirec Direccion, string Ciudad);
+    void altaVendedor(string Nombre, string Contraseña,
+    Date FNacimiento, string RUT);
+    void listarUsuarios();
 private:
-    IDictionary* Cliente;
-    IDictionary* Vendedor;
+    IDictionary* Usuarios;
 };
 
 

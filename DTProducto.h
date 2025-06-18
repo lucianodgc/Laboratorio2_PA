@@ -8,7 +8,8 @@ using namespace std;
 
 struct DTproducto{
     string CodProd;
-    string NomProd;
+    string Nombre;
 };
+
 
 #endif
