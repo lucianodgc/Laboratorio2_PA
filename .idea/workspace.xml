@@ -32,7 +32,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
+      <change afterPath="$PROJECT_DIR$/ControladorProducto.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControladorProducto.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControladorPromocion.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControladorPromocion.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controladores/ControladorUsuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controladores/ControladorUsuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estructuras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IControladorUsuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorUsuario.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +86,9 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -104,12 +114,19 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lugam\CLionProjects\Laboratorio Final" />
+      <recent name="C:\Users\lugam\CLionProjects\Laboratorio Final\Clases y DT" />
       <recent name="C:\Users\lugam\CLionProjects\Laboratorio Final\Controladores" />
       <recent name="C:\Users\lugam\CLionProjects\Laboratorio Final\Interfaces" />
       <recent name="C:\Users\lugam\CLionProjects\untitled2" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="untitled2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="untitled2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled2" RUN_TARGET_NAME="untitled2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -135,7 +152,7 @@
       <workItem from="1750261269359" duration="820000" />
       <workItem from="1750262169530" duration="7650000" />
       <workItem from="1750272166770" duration="4904000" />
-      <workItem from="1750277140214" duration="2000" />
+      <workItem from="1750277140214" duration="1597000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion">
       <option name="closed" value="true" />
@@ -177,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750276400254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750277171532</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750277171532</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

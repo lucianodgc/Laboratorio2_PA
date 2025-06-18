@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-typedef struct Date {
+struct Date {
 	int anio;
 	int mes;
 	int dia;
