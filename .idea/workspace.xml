@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="RiderCppLiveTemplatesSettings" type="string" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="6" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comentario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Comentario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Comentario.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Compras.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorUsuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fabrica.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Producto.h" beforeDir="false" afterPath="$PROJECT_DIR$/Producto.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Promocion.h" beforeDir="false" afterPath="$PROJECT_DIR$/Promocion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendedor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendedor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yetix17/Laboratorio_Pa1.git&quot;,
+    &quot;accountId&quot;: &quot;ccf23556-fd95-4986-9d44-13a1b411a5b7&quot;
+  }
+}</component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3.6" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;0006ffff&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2yPmifXOttZMQYODWQn32S6ypKc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/lugam/CLionProjects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/lugam/CLionProjects/untitled2/main.cpp",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lugam\CLionProjects\untitled2" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="" />
+      <created>1749744710973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749744710973</updated>
+      <workItem from="1749744712026" duration="2807000" />
+      <workItem from="1750195889263" duration="1794000" />
+      <workItem from="1750197901905" duration="271000" />
+      <workItem from="1750198230796" duration="1128000" />
+      <workItem from="1750199382724" duration="6000" />
+      <workItem from="1750199394274" duration="30000" />
+      <workItem from="1750199430960" duration="12000" />
+      <workItem from="1750199467976" duration="5080000" />
+      <workItem from="1750261269359" duration="820000" />
+      <workItem from="1750262169530" duration="7650000" />
+      <workItem from="1750271859762" duration="105000" />
+      <workItem from="1750271974077" duration="59000" />
+      <workItem from="1750272103549" duration="44000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750204448901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750204448901</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750204479649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750204479649</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacion" />
+  </component>
+</project>
