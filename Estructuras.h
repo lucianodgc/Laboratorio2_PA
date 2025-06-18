@@ -1,3 +1,6 @@
+#ifndef ESTRUCTURAS_H
+#define ESTRUCTURAS_H
+
 
 #include <iostream>
 
@@ -14,6 +17,8 @@ struct DataDirec {
     int NroPuerta;
 };
 
-typedef enum{
+typedef enum Cat{
 	Ropa, Electrodomesticos, Otros
-}Cat;
+};
+
+#endif

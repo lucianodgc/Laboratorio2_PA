@@ -13,8 +13,6 @@ class Comentario: public ICollectible {
 public:
     Comentario();
     virtual ~Comentario();
-    void RealizarComentario(string Texto);
-    void ResponderComentario(int ID, string Texto);
     int getID();
     string getTexto();
     Date getFComentario();

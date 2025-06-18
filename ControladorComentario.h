@@ -13,6 +13,8 @@ class ControladorComentario: public IControladorComentario {
 public:
     ControladorComentario();
     virtual ~ControladorComentario();
+    void RealizarComentario(string Texto);
+    void ResponderComentario(int ID, string Texto);
 private:
     IDictionary* Comentarios;
 };

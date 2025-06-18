@@ -4,6 +4,7 @@
 
 #include "Interfaces.h"
 #include "IControladorCompras.h"
+#include <iostream>
 
 using namespace std;
 

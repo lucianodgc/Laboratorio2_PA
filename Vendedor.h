@@ -13,7 +13,7 @@ using namespace std;
 
 class Vendedor:public Usuario {
 public:
-    Vendedor();
+    Vendedor(string Nickname, string Contraseña, Date Fnacimiento, string RUT);
     virtual ~Vendedor();
     string getRUT();
 private:

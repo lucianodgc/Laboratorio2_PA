@@ -7,6 +7,7 @@ using namespace std;
 class IControladorCompras {
 public:
     virtual void agregarProducto(string &CodProd, int Cantidad) = 0;
+    virtual ~IControladorCompras() = default;
 
 };
 

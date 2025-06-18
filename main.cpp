@@ -5,6 +5,11 @@
 int main() {
 
 
+    IControladorUsuario* ctrlUsuario = Fabrica::getControladorUsuario();
 
-    return 0;
+    Date fecha(10, 6, 2000);
+    ctrlUsuario->altaCliente("luciano", "clave123", fecha, {"Calle Falsa", 1234}, "Maldonado");
+
+    IControladorProducto* ctrlProducto = Fabrica::getControladorProducto();
+
 }
