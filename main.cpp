@@ -11,8 +11,9 @@ int main() {
     IControladorUsuario* ctrl = Fabrica::getControladorUsuario();
     int op;
     do {
+        int op1;
         cout << "\n===== MENU =====\n";
-        cout << "1. Alta de cliente\n";
+        cout << "1. Alta Usuario\n";
         cout << "2. Listar usuarios\n";
         cout << "3. Cargar datos de prueba\n";
         cout << "0. Salir\n";
@@ -21,14 +22,35 @@ int main() {
         cin.ignore();
 
         if (op == 1) {
-            string Nombre, Contraseña, Ciudad, NomCalle;
+            string Nombre, Contraseña, Ciudad, NomCalle, RUT;
             int d, m, a, NroPuerta;
+            char z;
+            cout << "Ingresar Cliente(1) o Ingresar Vendedor(2): "; cin >> op1; cin.ignore();
+
             cout << "Nickname: "; getline(cin, Nombre);
             cout << "Contraseña: "; getline(cin, Contraseña);
-            cout << "Fecha nacimiento (d m a): "; cin >> d, m, a; cin.ignore();
-            cout << "Direccion: "; cin >> NomCalle, NroPuerta; cin.ignore();
-            cout << "Ciudad: "; getline(cin, Ciudad);
-            ctrl->altaCliente(Nombre, Contraseña, Date(d, m, a), DataDirec(NomCalle, NroPuerta), Ciudad);
+
+            cout << "Fecha nacimiento (dd/mm/aa): ";
+            cin >> d >> z >> m >> z >> a;
+            cin.ignore();
+
+            if (op1 == 1) {
+                cout << "Direccion (calle): ";
+                getline(cin, NomCalle);
+                cout << "Numero: ";
+                cin >> NroPuerta;
+                cin.ignore();
+
+                cout << "Ciudad: ";
+                getline(cin, Ciudad);
+
+                ctrl->altaCliente(Nombre, Contraseña, Date(d, m, a), DataDirec(NomCalle, NroPuerta), Ciudad);
+            } else {
+                cout << "RUT: ";
+                getline(cin, RUT);
+
+                ctrl->altaVendedor(Nombre, Contraseña, Date(d, m, a), RUT);
+            }
         }
         else if (op == 2) ctrl->listarUsuarios();
         else if (op == 3) cargarDatosPrueba();

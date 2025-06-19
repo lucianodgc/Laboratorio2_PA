@@ -14,6 +14,6 @@ string Date::toString() {return to_string(dia) + "/" + to_string(mes) + "/" + to
 DataDirec::DataDirec(const string& nomCalle, int nroPuerta) : NomCalle(nomCalle), NroPuerta(nroPuerta) {}
 DataDirec::DataDirec() {}
 DataDirec::~DataDirec() {}
-string DataDirec::toString() { return NomCalle + "-" + to_string(NroPuerta); }
+string DataDirec::toString() { return "Nombre Calle: " + NomCalle + ", NroPuerta: " + to_string(NroPuerta); }
 string DataDirec::getNomCalle() { return NomCalle; }
 int DataDirec::getNroPuerta() { return NroPuerta; }

@@ -32,55 +32,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
-      <change afterPath="$PROJECT_DIR$/Estructuras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorComentario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorComentario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorProducto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorProducto.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorProducto.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorProducto.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorPromocion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorPromocion.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorPromocion.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorPromocion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControladorUsuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estructuras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica.h" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorComentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorComentario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorCompras.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorCompras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorUsuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorUsuario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces.h" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-bf2fa4369099bf73c6cc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a900c98bee3b16868c3e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d9eea6d3fe0ed80dcffe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-06-18T18-42-48-0805.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled2-Debug-72529c866b36bdf493b5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-6082f31f4c46160119db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estructuras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendedor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Cliente.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Cliente.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/ControladorUsuario.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/ControladorUsuario.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Estructuras.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Estructuras.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Usuario.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Usuario.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Vendedor.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/Vendedor.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/LaboratorioFinal.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/LaboratorioFinal.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +96,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
@@ -206,7 +174,7 @@
       <workItem from="1750340392174" duration="904000" />
       <workItem from="1750341305201" duration="1999000" />
       <workItem from="1750343369043" duration="52000" />
-      <workItem from="1750343453779" duration="4236000" />
+      <workItem from="1750343453779" duration="7490000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion">
       <option name="closed" value="true" />
@@ -296,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750336753369</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750347774990</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750347774990</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
