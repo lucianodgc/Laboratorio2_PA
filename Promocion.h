@@ -18,7 +18,6 @@ private:
 	string Nombre;
     string Descripcion;
     Date FVencimiento;
-    IDictionary* Productos;
     ICollection* PromocionProducto;
 
 };

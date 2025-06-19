@@ -16,7 +16,6 @@ public:
 private:
     Date FCompra;
     float MontoFinal;
-    IDictionary *Productos;
     ICollection *ProdutoCompras;
 
 };

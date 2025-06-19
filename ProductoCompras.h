@@ -2,6 +2,8 @@
 #ifndef PRODUCTOCOMPRAS_H
 #define PRODUCTOCOMPRAS_H
 
+#include "Producto.h"
+#include "Compras.h"
 
 using namespace std;
 
@@ -14,6 +16,8 @@ public:
 private:
 	int Cantidad;
     bool Enviado;
+    Producto *Productos;
+    Compras *Compras;
 };
 
 

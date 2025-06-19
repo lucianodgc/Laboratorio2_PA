@@ -14,9 +14,9 @@ public:
     ControladorPromocion();
     virtual ~ControladorPromocion();
     void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, string NicknameVendedor) = 0;
-    void AgregarProducto(string CodProd, int CantidadMinima) = 0;
-    void ListarPromosVigentes() = 0;
-    DTpromocion VerInfoPromo() = 0;
+    void AgregarProducto(string CodProd, int CantidadMinima);
+    void ListarPromosVigentes();
+    DTpromocion VerInfoPromo();
 private:
     IDictionary* Promociones;
 };

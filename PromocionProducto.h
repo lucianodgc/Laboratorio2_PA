@@ -3,6 +3,7 @@
 #define PROMOCIONPRODUCTO_H
 
 #include "Promocion.h"
+#include "Producto.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ public:
 private:
 	int CantMinima;
     float DescuentoPct;
-    Promocion* misPromociones;
+    Promocion* Promociones;
+    Producto* Poductos;
 };
 
 

@@ -32,23 +32,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Comentario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorComentario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorComentario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorComentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorComentario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorCompras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorCompras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorCompras.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorCompras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControladorUsuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estructuras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorComentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorComentario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorCompras.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorCompras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControladorProducto.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorProducto.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vendedor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vendedor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorPromocion.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorPromocion.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +148,8 @@
       <workItem from="1750288060858" duration="295000" />
       <workItem from="1750288367292" duration="84000" />
       <workItem from="1750288460854" duration="63000" />
-      <workItem from="1750288533478" duration="1063000" />
+      <workItem from="1750288533478" duration="1077000" />
+      <workItem from="1750334947849" duration="1460000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion">
       <option name="closed" value="true" />
@@ -236,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750288043561</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750289602984</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750289602984</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
