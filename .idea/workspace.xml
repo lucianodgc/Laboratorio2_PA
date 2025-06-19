@@ -22,7 +22,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="untitled2" targetName="untitled2" />
+      <config projectName="LaboratorioFinal" targetName="LaboratorioFinal" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -32,9 +32,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
+      <change afterPath="$PROJECT_DIR$/Estructuras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorComentario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorComentario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorProducto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorProducto.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorProducto.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorProducto.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorPromocion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorPromocion.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControladorPromocion.h" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorPromocion.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControladorUsuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ControladorUsuario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estructuras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fabrica.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fabrica.h" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IControladorComentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorComentario.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IControladorCompras.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorCompras.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IControladorUsuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControladorUsuario.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces.h" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-bf2fa4369099bf73c6cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a900c98bee3b16868c3e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d9eea6d3fe0ed80dcffe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-06-18T18-42-48-0805.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled2-Debug-72529c866b36bdf493b5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-6082f31f4c46160119db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +107,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Cliente.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Comentario.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ICollection/interfaces/ICollectible.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IControladorUsuario.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Producto.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Promocion.h" root0="FORCE_HIGHLIGHTING" />
@@ -81,33 +129,33 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;CMake Application.untitled2.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lugam/CLionProjects/Laboratorio Final&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lugam/CLionProjects/untitled2/main.cpp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.LaboratorioFinal.executor": "Debug",
+    "CMake Application.untitled2.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/lugam/CLionProjects/Laboratorio Final",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/lugam/CLionProjects/untitled2/main.cpp",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lugam\CLionProjects\Laboratorio Final" />
@@ -118,7 +166,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="untitled2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="untitled2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled2" RUN_TARGET_NAME="untitled2">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LaboratorioFinal" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LaboratorioFinal" TARGET_NAME="LaboratorioFinal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LaboratorioFinal" RUN_TARGET_NAME="LaboratorioFinal">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -149,7 +202,11 @@
       <workItem from="1750288367292" duration="84000" />
       <workItem from="1750288460854" duration="63000" />
       <workItem from="1750288533478" duration="1077000" />
-      <workItem from="1750334947849" duration="1460000" />
+      <workItem from="1750334947849" duration="5418000" />
+      <workItem from="1750340392174" duration="904000" />
+      <workItem from="1750341305201" duration="1999000" />
+      <workItem from="1750343369043" duration="52000" />
+      <workItem from="1750343453779" duration="4236000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion">
       <option name="closed" value="true" />
@@ -231,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750289602984</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750336753369</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750336753369</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

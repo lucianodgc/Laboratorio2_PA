@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/untitled2"
+			"value" : "C:/Program Files (x86)/LaboratorioFinal"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "untitled2"
+			"value" : "LaboratorioFinal"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,19 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "untitled2_BINARY_DIR",
+			"name" : "LaboratorioFinal_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1294,7 +1282,7 @@
 			"value" : "C:/Users/lugam/CLionProjects/Laboratorio Final/cmake-build-debug"
 		},
 		{
-			"name" : "untitled2_IS_TOP_LEVEL",
+			"name" : "LaboratorioFinal_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1306,7 +1294,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "untitled2_SOURCE_DIR",
+			"name" : "LaboratorioFinal_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1316,6 +1304,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/lugam/CLionProjects/Laboratorio Final"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",

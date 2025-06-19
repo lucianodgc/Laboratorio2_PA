@@ -2,6 +2,8 @@
 #ifndef ICONTROLADORCOMPRAS_H
 #define ICONTROLADORCOMPRAS_H
 
+#include <iostream>
+
 using namespace std;
 
 class IControladorCompras {

@@ -2,7 +2,10 @@
 #ifndef ICONTROLADOR_H
 #define ICONTROLADOR_H
 
-#include "Usuario.h"
+#include <iostream>
+
+#include "Cliente.h"
+#include "Vendedor.h"
 
 using namespace std;
 

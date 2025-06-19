@@ -13,7 +13,7 @@ class ControladorPromocion:public IControladorPromocion {
 public:
     ControladorPromocion();
     virtual ~ControladorPromocion();
-    void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, string NicknameVendedor) = 0;
+    void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, string NicknameVendedor);
     void AgregarProducto(string CodProd, int CantidadMinima);
     void ListarPromosVigentes();
     DTpromocion VerInfoPromo();

@@ -15,7 +15,7 @@ private:
     static IControladorProducto* controladorProducto;
     static IControladorPromocion* controladorPromocion;
     static IControladorCompras* controladorCompras;
-    static IControladorComentario* controladorComentarieo;
+    static IControladorComentario* controladorComentarieo ;
 
 public:
     static IControladorUsuario* getControladorUsuario();

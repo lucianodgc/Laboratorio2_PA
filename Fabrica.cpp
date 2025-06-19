@@ -7,6 +7,9 @@
 
 IControladorUsuario* Fabrica::controladorUsuario = nullptr;
 IControladorProducto* Fabrica::controladorProducto = nullptr;
+IControladorPromocion* Fabrica::controladorPromocion = nullptr;
+IControladorCompras* Fabrica::controladorCompras = nullptr;
+IControladorComentario* Fabrica::controladorComentarieo = nullptr;
 
 IControladorUsuario* Fabrica::getControladorUsuario() {
     if (!controladorUsuario)
@@ -14,8 +17,8 @@ IControladorUsuario* Fabrica::getControladorUsuario() {
     return controladorUsuario;
 }
 
-IControladorProducto* Fabrica::getControladorProducto() {
+/*IControladorProducto* Fabrica::getControladorProducto() {
     if (!controladorProducto)
         controladorProducto = new ControladorProducto();
     return controladorProducto;
-}
+}*/

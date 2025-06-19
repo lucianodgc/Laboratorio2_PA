@@ -17,7 +17,7 @@ public:
     string Descripcion, Cat Categoria);
     void AgregarProducto(string CodProd, int Cantidad);
     DTprod MostrarDatosProducto(string CodProd);
-    set<DTproducto> ListarProductos() = 0;
+    set<DTproducto> ListarProductos();
 private:
     IDictionary* Productos;
 };

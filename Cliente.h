@@ -3,7 +3,6 @@
 #define CLIENTE_H
 
 #include "Interfaces.h"
-#include "Comentario.h"
 #include "Usuario.h"
 
 using namespace std;
