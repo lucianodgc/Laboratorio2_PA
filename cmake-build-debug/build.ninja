@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: LaboratorioFinal
+# Project: LaboratorioFinal2
 # Configurations: Debug
 # =============================================================================
 
@@ -39,220 +39,196 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/lugam/CLionProjects/Laboratorio$ Final/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target LaboratorioFinal
+# Object build statements for EXECUTABLE target LaboratorioFinal2
 
 
 #############################################
-# Order-only phony target for LaboratorioFinal
+# Order-only phony target for LaboratorioFinal2
 
-build cmake_object_order_depends_target_LaboratorioFinal: phony || .
+build cmake_object_order_depends_target_LaboratorioFinal2: phony || .
 
-build CMakeFiles/LaboratorioFinal.dir/main.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/main.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\main.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/main.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/main.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Cliente.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Cliente.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Cliente.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Cliente.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Cliente.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Cliente.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Comentario.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Comentario.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Comentario.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Comentario.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Comentario.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Comentario.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Compras.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Compras.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Compras.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Controlador.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Controlador.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Controlador.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ControladorComentario.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ControladorComentario.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ControladorComentario.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Compras.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Compras.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Compras.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ControladorCompras.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ControladorCompras.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ControladorCompras.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Estructuras.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Estructuras.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Estructuras.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ControladorProducto.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ControladorProducto.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ControladorProducto.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Fabrica.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Fabrica.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Fabrica.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ControladorPromocion.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ControladorPromocion.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ControladorPromocion.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Producto.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Producto.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Producto.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ControladorUsuario.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ControladorUsuario.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ControladorUsuario.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ProductoCompras.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ProductoCompras.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ProductoCompras.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Estructuras.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Estructuras.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Estructuras.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Promocion.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Promocion.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Promocion.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Fabrica.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Fabrica.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Fabrica.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/PromocionProducto.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/PromocionProducto.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\PromocionProducto.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Producto.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Producto.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Producto.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Usuario.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Usuario.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Usuario.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/ProductoCompras.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ProductoCompras.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ProductoCompras.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/Vendedor.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/Vendedor.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\Vendedor.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir
 
-build CMakeFiles/LaboratorioFinal.dir/Promocion.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Promocion.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Promocion.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/Integer.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/Integer.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\Integer.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection
 
-build CMakeFiles/LaboratorioFinal.dir/PromocionProducto.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/PromocionProducto.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\PromocionProducto.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/String.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/String.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\String.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection
 
-build CMakeFiles/LaboratorioFinal.dir/Usuario.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Usuario.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Usuario.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/List.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/collections/List.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections\List.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections
 
-build CMakeFiles/LaboratorioFinal.dir/Vendedor.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/Vendedor.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\Vendedor.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/ListIterator.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/collections/ListIterator.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections\ListIterator.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/Integer.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/Integer.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\Integer.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/ListNode.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/collections/ListNode.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections\ListNode.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/String.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/String.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\String.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/OrderedDictionary.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/collections/OrderedDictionary.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections\OrderedDictionary.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/collections/List.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/collections/List.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\collections\List.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/OrderedDictionaryEntry.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/collections/OrderedDictionaryEntry.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections\OrderedDictionaryEntry.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\collections
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\collections
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/collections/ListIterator.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/collections/ListIterator.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\collections\ListIterator.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/ICollectible.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/ICollectible.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\ICollectible.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\collections
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/collections/ListNode.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/collections/ListNode.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\collections\ListNode.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/ICollection.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/ICollection.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\ICollection.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\collections
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/collections/OrderedDictionary.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/collections/OrderedDictionary.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\collections\OrderedDictionary.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IDictionary.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/IDictionary.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\IDictionary.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\collections
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/collections/OrderedDictionaryEntry.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/collections/OrderedDictionaryEntry.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\collections\OrderedDictionaryEntry.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IIterator.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/IIterator.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\IIterator.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\collections
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/ICollectible.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/ICollectible.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\ICollectible.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IKey.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/IKey.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\IKey.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/ICollection.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/ICollection.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\ICollection.cpp.obj.d
+build CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/OrderedKey.cpp.obj: CXX_COMPILER__LaboratorioFinal2_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/ICollection/interfaces/OrderedKey.cpp || cmake_object_order_depends_target_LaboratorioFinal2
+  DEP_FILE = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces\OrderedKey.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
-
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IDictionary.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/IDictionary.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\IDictionary.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
-
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IIterator.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/IIterator.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\IIterator.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
-
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IKey.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/IKey.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\IKey.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
-
-build CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/OrderedKey.cpp.obj: CXX_COMPILER__LaboratorioFinal_unscanned_Debug C$:/Users/lugam/CLionProjects/Laboratorio$ Final/ICollection/interfaces/OrderedKey.cpp || cmake_object_order_depends_target_LaboratorioFinal
-  DEP_FILE = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces\OrderedKey.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
-  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal.dir\ICollection\interfaces
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LaboratorioFinal2.dir\ICollection\interfaces
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target LaboratorioFinal
+# Link build statements for EXECUTABLE target LaboratorioFinal2
 
 
 #############################################
-# Link the executable LaboratorioFinal.exe
+# Link the executable LaboratorioFinal2.exe
 
-build LaboratorioFinal.exe: CXX_EXECUTABLE_LINKER__LaboratorioFinal_Debug CMakeFiles/LaboratorioFinal.dir/main.cpp.obj CMakeFiles/LaboratorioFinal.dir/Cliente.cpp.obj CMakeFiles/LaboratorioFinal.dir/Comentario.cpp.obj CMakeFiles/LaboratorioFinal.dir/Compras.cpp.obj CMakeFiles/LaboratorioFinal.dir/ControladorComentario.cpp.obj CMakeFiles/LaboratorioFinal.dir/ControladorCompras.cpp.obj CMakeFiles/LaboratorioFinal.dir/ControladorProducto.cpp.obj CMakeFiles/LaboratorioFinal.dir/ControladorPromocion.cpp.obj CMakeFiles/LaboratorioFinal.dir/ControladorUsuario.cpp.obj CMakeFiles/LaboratorioFinal.dir/Estructuras.cpp.obj CMakeFiles/LaboratorioFinal.dir/Fabrica.cpp.obj CMakeFiles/LaboratorioFinal.dir/Producto.cpp.obj CMakeFiles/LaboratorioFinal.dir/ProductoCompras.cpp.obj CMakeFiles/LaboratorioFinal.dir/Promocion.cpp.obj CMakeFiles/LaboratorioFinal.dir/PromocionProducto.cpp.obj CMakeFiles/LaboratorioFinal.dir/Usuario.cpp.obj CMakeFiles/LaboratorioFinal.dir/Vendedor.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/Integer.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/String.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/collections/List.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/collections/ListIterator.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/collections/ListNode.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/collections/OrderedDictionary.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/collections/OrderedDictionaryEntry.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/ICollectible.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/ICollection.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IDictionary.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IIterator.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/IKey.cpp.obj CMakeFiles/LaboratorioFinal.dir/ICollection/interfaces/OrderedKey.cpp.obj
+build LaboratorioFinal2.exe: CXX_EXECUTABLE_LINKER__LaboratorioFinal2_Debug CMakeFiles/LaboratorioFinal2.dir/main.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Cliente.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Comentario.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Controlador.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Compras.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Estructuras.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Fabrica.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Producto.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ProductoCompras.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Promocion.cpp.obj CMakeFiles/LaboratorioFinal2.dir/PromocionProducto.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Usuario.cpp.obj CMakeFiles/LaboratorioFinal2.dir/Vendedor.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/Integer.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/String.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/List.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/ListIterator.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/ListNode.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/OrderedDictionary.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/collections/OrderedDictionaryEntry.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/ICollectible.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/ICollection.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IDictionary.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IIterator.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/IKey.cpp.obj CMakeFiles/LaboratorioFinal2.dir/ICollection/interfaces/OrderedKey.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\LaboratorioFinal.dir
+  OBJECT_DIR = CMakeFiles\LaboratorioFinal2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = LaboratorioFinal.exe
-  TARGET_IMPLIB = libLaboratorioFinal.dll.a
-  TARGET_PDB = LaboratorioFinal.exe.dbg
+  TARGET_FILE = LaboratorioFinal2.exe
+  TARGET_IMPLIB = libLaboratorioFinal2.dll.a
+  TARGET_PDB = LaboratorioFinal2.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\lugam\CLionProjects\Laboratorio Final\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\lugam\CLionProjects\Laboratorio Final 2\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -263,7 +239,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\lugam\CLionProjects\Laboratorio Final\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\lugam\CLionProjects\Laboratorio Final" -B"C:\Users\lugam\CLionProjects\Laboratorio Final\cmake-build-debug""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\lugam\CLionProjects\Laboratorio Final 2\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\lugam\CLionProjects\Laboratorio Final 2" -B"C:\Users\lugam\CLionProjects\Laboratorio Final 2\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -273,7 +249,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build LaboratorioFinal: phony LaboratorioFinal.exe
+build LaboratorioFinal2: phony LaboratorioFinal2.exe
 
 # =============================================================================
 # Folder targets.
@@ -281,9 +257,9 @@ build LaboratorioFinal: phony LaboratorioFinal.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/lugam/CLionProjects/Laboratorio Final/cmake-build-debug
+# Folder: C:/Users/lugam/CLionProjects/Laboratorio Final 2/cmake-build-debug
 
-build all: phony LaboratorioFinal.exe
+build all: phony LaboratorioFinal2.exe
 
 # =============================================================================
 # Built-in targets
@@ -292,14 +268,14 @@ build all: phony LaboratorioFinal.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/lugam/CLionProjects/Laboratorio$ Final/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/lugam/CLionProjects/Laboratorio$ Final/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.4/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/lugam/CLionProjects/Laboratorio$ Final$ 2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
 
 
 #############################################

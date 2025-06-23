@@ -3,26 +3,14 @@
 #define FABRICA_H
 
 using namespace std;
-#include "IControladorUsuario.h"
-#include "IControladorProducto.h"
-#include "IControladorPromocion.h"
-#include "IControladorCompras.h"
-#include "IControladorComentario.h"
+
+#include "IControlador.h"
 
 class Fabrica {
 private:
-    static IControladorUsuario* controladorUsuario;
-    static IControladorProducto* controladorProducto;
-    static IControladorPromocion* controladorPromocion;
-    static IControladorCompras* controladorCompras;
-    static IControladorComentario* controladorComentarieo ;
+    static IControlador* controlador;
 
 public:
-    static IControladorUsuario* getControladorUsuario();
-    static IControladorProducto* getControladorProducto();
-    static IControladorPromocion* getControladorPromocion();
-    static IControladorCompras* getControladorCompras();
-    static IControladorComentario* getControladorComentario();
-
+    static IControlador* getControlador();
 };
 #endif

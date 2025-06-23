@@ -1,11 +1,18 @@
 
 #include "Producto.h"
 
-Producto::Producto() {}
+Producto::Producto(int CodProd, string Nombre, float Precio, int stock, string Descripcion, Cat Categoria) {
+    this->CodProd = CodProd;
+    this->Nombre = Nombre;
+    this->Precio = Precio;
+    this->Stock = stock;
+    this->Categoria = Categoria;
+    this->Descripcion = Descripcion;
+}
 
 Producto::~Producto() {}
 
-string Producto::getCodProd(){return CodProd;}
+int Producto::getCodProd(){return CodProd;}
 
 string Producto::getNombre(){return Nombre;}
 

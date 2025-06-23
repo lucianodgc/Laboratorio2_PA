@@ -1,18 +1,14 @@
 cmake_minimum_required(VERSION 3.16)
-project(LaboratorioFinal)
+project(LaboratorioFinal2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(LaboratorioFinal
+add_executable(LaboratorioFinal2
         main.cpp
         Cliente.cpp
         Comentario.cpp
+        Controlador.cpp
         Compras.cpp
-        ControladorComentario.cpp
-        ControladorCompras.cpp
-        ControladorProducto.cpp
-        ControladorPromocion.cpp
-        ControladorUsuario.cpp
         Estructuras.cpp
         Fabrica.cpp
         Producto.cpp

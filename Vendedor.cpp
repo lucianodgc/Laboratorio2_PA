@@ -9,3 +9,9 @@ Vendedor::Vendedor(string Nickname, string Contraseña, Date Fnacimiento, string
 Vendedor::~Vendedor() {}
 
 string Vendedor::getRUT() {return RUT;}
+
+void Vendedor::agregarProducto(Producto* p) {
+   int cod = p->getCodProd();
+    IKey* key = new Integer(cod);
+    Productos->add(key, p);
+}

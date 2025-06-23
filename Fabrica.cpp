@@ -1,24 +1,10 @@
 #include "Fabrica.h"
-#include "ControladorUsuario.h"
-#include "ControladorProducto.h"
-#include "IControladorPromocion.h"
-#include "IControladorCompras.h"
-#include "IControladorComentario.h"
+#include "Controlador.h"
 
-IControladorUsuario* Fabrica::controladorUsuario = nullptr;
-IControladorProducto* Fabrica::controladorProducto = nullptr;
-IControladorPromocion* Fabrica::controladorPromocion = nullptr;
-IControladorCompras* Fabrica::controladorCompras = nullptr;
-IControladorComentario* Fabrica::controladorComentarieo = nullptr;
+IControlador* Fabrica::controlador = nullptr;
 
-IControladorUsuario* Fabrica::getControladorUsuario() {
-    if (!controladorUsuario)
-        controladorUsuario = new ControladorUsuario();
-    return controladorUsuario;
+IControlador* Fabrica::getControlador() {
+    if (!controlador)
+        controlador = new Controlador();
+    return controlador;
 }
-
-/*IControladorProducto* Fabrica::getControladorProducto() {
-    if (!controladorProducto)
-        controladorProducto = new ControladorProducto();
-    return controladorProducto;
-}*/
