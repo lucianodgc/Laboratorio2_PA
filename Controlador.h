@@ -18,20 +18,24 @@ public:
     Date FNacimiento, string RUT);
     void listarUsuarios();
     void listarVendedores();
-    void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, string NicknameVendedor);
+
+    void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, string NicknameVendedor, int Descuento);
     void ListarPromosVigentes();
-    DTpromocion VerInfoPromo();
+    void VerInfoPromo();
+
     void AltaProducto(string Nombre, float Precio, int Stock,
     string Descripcion, Cat Categoria, string NicknameVendedor);
     void AgregarProducto(string CodProd, int Cantidad);
-    DTprod MostrarDatosProducto(string CodProd);
-    set<DTproducto> ListarProductos();
+    void ListarProductos();
+    void ListarProductos(string NicknameVendedor);
+    void mostrarDatosProducto(int CodProd);
     void agregarProducto(Vendedor* Vend, Producto* Prod);
     void agregarProducto(string &CodProd, int Cantidad);
+
     void RealizarComentario(string Texto);
     void ResponderComentario(int ID, string Texto);
     int generarCodigoProducto();
-    Vendedor* SeleccionarVendedor(string nickname);
+    bool productoEnPromocionVigente(Producto* producto);
 private:
     IDictionary* Usuarios;
     IDictionary* Promociones;

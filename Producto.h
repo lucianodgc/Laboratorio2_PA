@@ -3,7 +3,9 @@
 #define PRODUCTO_H
 
 #include "Interfaces.h"
-#include "DTprod.h"
+#include "Usuario.h"
+
+class Vendedor;
 
 using namespace std;
 
@@ -11,7 +13,8 @@ using namespace std;
 
 class Producto: public ICollectible {
 public:
-    Producto(int CodProd, string Nombre, float Precio, int stock, string Descripcion, Cat Categoria);
+    Producto(int CodProd, string Nombre, float Precio, int stock,
+    string Descripcion, Cat Categoria, Vendedor* vendedor);
     virtual ~Producto();
     int getCodProd();
     string getNombre();
@@ -19,6 +22,7 @@ public:
     int getStock();
     string getDescripcion();
     Cat getCategoria();
+    Vendedor* getVendedor();
 private:
 	int CodProd;
     int Stock;
@@ -27,6 +31,7 @@ private:
     string Descripcion;
     Cat Categoria;
     IDictionary* Comentarios;
+    Vendedor* vendedor;
 };
 
 

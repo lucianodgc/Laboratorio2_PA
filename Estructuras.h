@@ -15,6 +15,8 @@ public:
 	int getMes();
 	int getAño();
 	string toString();
+	Date obtenerFechaActual();
+	bool fechaEsMayorIgual(const Date& otraFecha);
 private:
 	int dia;
 	int mes;
@@ -38,5 +40,6 @@ enum Cat{
 	Ropa, Electrodomesticos, Otros
 };
 
+Cat stringToCat(const string& categoria);
 
 #endif

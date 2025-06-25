@@ -1,7 +1,14 @@
 #include "Fabrica.h"
 #include "Controlador.h"
 
+#include "PromocionProducto.h"
+
 Controlador::Controlador() {
+    Usuarios = new OrderedDictionary();
+    Productos = new OrderedDictionary();
+    Promociones = new OrderedDictionary();
+    Compras = new OrderedDictionary();
+    Comentarios = new OrderedDictionary();
 }
 
 Controlador::~Controlador() {
@@ -19,25 +26,13 @@ int Controlador::generarCodigoProducto() {
     Producto* P;
     for (it = Productos->getIterator(); it->hasCurrent(); it->next()) {
         P = dynamic_cast<Producto *>(it->getCurrent());
+        if (P == nullptr) {
+            cod = 0;
+            break;
+        }
         cod = P->getCodProd();
     }
     return cod+1;
-}
-
-void Controlador::AltaProducto(string Nombre, float Precio, int Stock,
-    string Descripcion, Cat Categoria, string NicknameVendedor) {
-
-    Vendedor* vendedor = SeleccionarVendedor(NicknameVendedor);
-    if (vendedor == nullptr) cout << "Vendedor no existe o no es válido.";
-    int codigo = generarCodigoProducto();
-    Producto* p = new Producto(codigo, Nombre, Precio, Stock, Descripcion, Categoria);
-
-    IKey* key = new Integer(codigo);
-    Productos->add(key, p);
-
-    vendedor->agregarProducto(p);
-
-    cout << "Producto agregado correctamente" << endl;
 }
 
 void Controlador::AgregarProducto(string nombre, int cantidad) {
@@ -45,29 +40,50 @@ void Controlador::AgregarProducto(string nombre, int cantidad) {
 
 void Controlador::agregarProducto(Vendedor* Vend, Producto* Prod) {
     if (Vend != nullptr && Prod != nullptr) {
-        //Vend->agregarProducto(Prod);
+
     }
-}
-
-DTprod Controlador::MostrarDatosProducto(string nombre) {
-    return DTprod();
-}
-
-set<DTproducto> Controlador::ListarProductos() {
-    return set<DTproducto>();
 }
 
 void Controlador::agregarProducto(string &CodProd, int Cantidad){}
 
 void Controlador::CrearPromocion(string Nombre, string Descripcion,
-Date FVencimiento, string NicknameVendedor) {
-}
+Date FVencimiento, string NicknameVendedor, int Descuento) {
+    IKey* key = new String(NicknameVendedor.c_str());
+    int op, Cant;
 
-void Controlador::ListarPromosVigentes() {
-}
+    Vendedor* vendedor = dynamic_cast<Vendedor*>(Usuarios->find(key));
+    if (vendedor == nullptr) {
+        cout << "\nVendedor no existe o no es válido.";
+        return;
+    }
 
-DTpromocion Controlador::VerInfoPromo() {
-    return DTpromocion();
+    Promocion* promocion = new Promocion(Nombre, Descripcion, FVencimiento, Descuento);
+
+    do {
+        cout << "(0. Terminar)\n";
+        cout << "Ingrese el código del producto (0 para terminar): "; cin >> op; cin.ignore();
+        IKey* key = new Integer(op);
+        Producto* p = dynamic_cast<Producto*>(Productos->find(key));
+        delete key;
+        if (p == nullptr) {
+            cout << "Producto no existe.\n";
+            continue;
+        }
+        if (productoEnPromocionVigente(p)) {
+            cout << "Ese producto ya está en una promoción vigente.\n";
+            continue;
+        }
+            cout << "Cant.min para aplicar promoción: "; cin >> Cant; cin.ignore();
+
+            promocion->agregarProducto(p, Cant);
+
+            cout << "Producto agregado a la promoción.\n";
+    } while (op != 0);
+
+    key = new String(Nombre.c_str());
+    Promociones->add(key, promocion);
+
+    cout << "Promoción creada correctamente.\n";
 }
 
 void Controlador::altaCliente(string Nickname, string Contraseña,
@@ -77,8 +93,8 @@ Date FNacimiento, DataDirec Direccion, string Ciudad) {
         cout << "\n[ERROR] Ya existe un usuario con ese nickname.\n";
         delete clave;
         return;
-    } else if (Nickname.length() < 6) {
-        cout << "\n[ERROR] El Nickname debe ser de al menos 6 caracteres.\n";
+    } else if (Contraseña.length() < 6) {
+        cout << "\n[ERROR] La contraseña debe ser de al menos 6 caracteres.\n";
         delete clave;
         return;
     }
@@ -93,8 +109,8 @@ Date FNacimiento, string RUT) {
         cout << "\n[ERROR] Ya existe un usuario con ese RUT.\n";
         delete clave;
         return;
-    } else if (Nickname.length() < 6) {
-        cout << "\n[ERROR] El Nickname debe ser de al menos 6 caracteres.\n";
+    } else if (Contraseña.length() < 6) {
+        cout << "\n[ERROR] La contraseña debe ser de al menos 6 caracteres.\n";
         delete clave;
         return;
     } else if (RUT.length() != 12) {
@@ -102,8 +118,29 @@ Date FNacimiento, string RUT) {
         delete clave;
         return;
     }
+    clave = new String(Nickname.c_str());
     Usuarios->add(clave, new Vendedor(Nickname, Contraseña, FNacimiento, RUT));
     cout << "[OK] Vendedor registrado correctamente.\n";
+}
+
+void Controlador::AltaProducto(string Nombre, float Precio, int Stock,
+    string Descripcion, Cat Categoria, string NicknameVendedor) {
+    IKey* key = new String(NicknameVendedor.c_str());
+    Vendedor* vendedor = dynamic_cast<Vendedor*>(Usuarios->find(key));
+    if (vendedor == nullptr) {
+        cout << "\nVendedor no existe o no es válido.";
+        return;
+    }
+
+    int codigo = generarCodigoProducto();
+    Producto* p = new Producto(codigo, Nombre, Precio, Stock, Descripcion, Categoria, vendedor);
+
+    key = new Integer(codigo);
+    Productos->add(key, p);
+
+    vendedor->agregarProducto(p);
+
+    cout << "Producto agregado correctamente" << endl;
 }
 
 void Controlador::listarUsuarios() {
@@ -135,16 +172,78 @@ void Controlador::listarVendedores() {
     delete it;
 }
 
-Vendedor* Controlador::SeleccionarVendedor(string nickname) {
-    IKey* key = new String(nickname.c_str());
-
-    if (!Usuarios->member(key)) {
-        delete key;
-        return nullptr;
+void Controlador::ListarProductos() {
+    IIterator* it = Productos->getIterator();
+    for (it; it->hasCurrent(); it->next()) {
+        Producto* p = dynamic_cast<Producto*>(it->getCurrent());
+        cout << "Código: " << p->getCodProd() << " - " << p->getNombre() << endl;
     }
+    delete it;
+}
 
+void Controlador::ListarProductos(string NicknameVendedor) {
+    IKey* key = new String(NicknameVendedor.c_str());
     Vendedor* vendedor = dynamic_cast<Vendedor*>(Usuarios->find(key));
     delete key;
-
-    return vendedor;
+    IDictionary* Productos = vendedor->getProductos();
+    IIterator* it = Productos->getIterator();
+    for (it; it->hasCurrent(); it->next()) {
+        Producto* p = dynamic_cast<Producto*>(it->getCurrent());
+        if (p)
+            cout << "Código: " << p->getCodProd() << " - " << p->getNombre() << endl;
+    }
+    delete it;
 }
+
+void Controlador::ListarPromosVigentes() {
+}
+
+void Controlador::mostrarDatosProducto(int CodProd) {
+    IKey* key = new Integer(CodProd);
+    if (!Productos->member(key)) {
+        delete key;
+        cout << "Producto no encontrado." << endl;
+        return;
+    }
+
+    Producto* p = dynamic_cast<Producto*>(Productos->find(key));
+    delete key;
+
+    cout << "Nombre: " << p->getNombre() << endl;
+    cout << "Precio: $" << p->getPrecio() << endl;
+    cout << "Stock: " << p->getStock() << endl;
+    cout << "Descripción: " << p->getDescripcion() << endl;
+
+    Cat cat = p->getCategoria();
+    if (cat == Ropa) cout << "Categoría: Ropa" << endl;
+    else if (cat == Electrodomesticos) cout << "Categoría: Electrodomésticos" << endl;
+    else cout << "Categoría: Otros" << endl;
+
+    Vendedor* v = p->getVendedor();
+    if (v != nullptr)
+        cout << "Vendedor: " << v->getNickname() << endl;
+}
+
+void Controlador::VerInfoPromo() {
+}
+
+bool Controlador::productoEnPromocionVigente(Producto* producto) {
+    Date hoy = hoy.obtenerFechaActual();
+
+    for (IIterator* it = Promociones->getIterator(); it->hasCurrent(); it->next()) {
+        Promocion* prom = dynamic_cast<Promocion*>(it->getCurrent());
+        if (prom != nullptr && prom->getFVencimiento().fechaEsMayorIgual(hoy)) {
+            ICollection* col = prom->getPromocionProducto();
+            for (IIterator* itPP = col->getIterator(); itPP->hasCurrent(); itPP->next()) {
+                PromocionProducto* pp = dynamic_cast<PromocionProducto*>(itPP->getCurrent());
+                if (pp != nullptr && pp->getProducto() == producto) {
+                    delete itPP;
+                    delete it;
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+

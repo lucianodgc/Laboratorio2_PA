@@ -17,7 +17,8 @@ public:
     Vendedor(string Nickname, string Contraseña, Date Fnacimiento, string RUT);
     virtual ~Vendedor();
     string getRUT();
-    void Vendedor::agregarProducto(Producto* p);
+    void agregarProducto(Producto* p);
+    IDictionary* getProductos();
 private:
     string RUT;
     IDictionary *Productos;

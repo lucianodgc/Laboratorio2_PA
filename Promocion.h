@@ -4,6 +4,8 @@
 
 #include "Estructuras.h"
 #include "Interfaces.h"
+#include "Producto.h"
+#include "PromocionProducto.h"
 
 using namespace std;
 
@@ -11,14 +13,20 @@ using namespace std;
 
 class Promocion: public ICollectible {
 public:
-    Promocion();
+    Promocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento);
     virtual ~Promocion();
-    void agregarProducto(string CodProd, int Cantidad);
+    void agregarProducto(Producto* Producto, int cantidadMinima);
+    string getNombre();
+    string getDescripcion();
+    Date getFVencimiento();
+    int getDescuento();
+    ICollection* getPromocionProducto();
 private:
 	string Nombre;
     string Descripcion;
+    int Descuento;
     Date FVencimiento;
-    ICollection* PromocionProducto;
+    ICollection* promocionProducto;
 
 };
 

@@ -9,7 +9,7 @@ using namespace std;
 
 
 
-class ProductoCompras {
+class ProductoCompras: public ICollectible {
 public:
     ProductoCompras();
     virtual ~ProductoCompras();

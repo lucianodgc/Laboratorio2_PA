@@ -19,7 +19,7 @@ protected:
     string Nickname;
     string Contraseña;
     Date Fnacimiento;
-    IDictionary* Comentario;
+    IDictionary* Comentarios;
 };
 
 
