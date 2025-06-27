@@ -1,5 +1,6 @@
 
 #include "Promocion.h"
+#include "PromocionProducto.h"
 
 Promocion::Promocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) :
 Nombre(Nombre),Descripcion(Descripcion), FVencimiento(FVencimiento), Descuento(Descuento){promocionProducto = new List();}
@@ -22,13 +23,15 @@ int Promocion::getDescuento(){return Descuento;}
 ICollection* Promocion::getPromocionProducto(){return promocionProducto;}
 
 bool Promocion::productoYaAgregado(Producto* p) {
-   for (IIterator* it = promocionProducto->getIterator(); it->hasCurrent(); it->next()) {
-      ICollectible* collectible = it->getCurrent();
-      PromocionProducto* pp = dynamic_cast<PromocionProducto*>(collectible);
-      if (pp->getProducto() == p) {
+   IIterator* it = promocionProducto->getIterator();
+   for (; it->hasCurrent(); it->next()) {
+      ICollectible* col = it->getCurrent();
+      PromocionProducto* promProd = dynamic_cast<PromocionProducto*>(col);
+      if (promProd != nullptr && promProd->getProducto() == p) {
          delete it;
          return true;
       }
    }
+   delete it;
    return false;
 }

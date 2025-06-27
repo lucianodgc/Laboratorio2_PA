@@ -5,7 +5,6 @@
 #include "Estructuras.h"
 #include "Interfaces.h"
 #include "Producto.h"
-#include "PromocionProducto.h"
 
 using namespace std;
 

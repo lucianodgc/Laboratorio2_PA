@@ -33,36 +33,23 @@
   <component name="ChangeListManager">
     <list default="true" id="468a3c1b-87f5-436d-a303-645dfc323768" name="Changes" comment="Implementacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comentario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Comentario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comentario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Comentario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Compras.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controlador.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controlador.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estructuras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estructuras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IControlador.h" beforeDir="false" afterPath="$PROJECT_DIR$/IControlador.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Producto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Producto.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Producto.h" beforeDir="false" afterPath="$PROJECT_DIR$/Producto.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductoCompras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ProductoCompras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductoCompras.h" beforeDir="false" afterPath="$PROJECT_DIR$/ProductoCompras.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Promocion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Promocion.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Promocion.h" beforeDir="false" afterPath="$PROJECT_DIR$/Promocion.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PromocionProducto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PromocionProducto.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PromocionProducto.h" beforeDir="false" afterPath="$PROJECT_DIR$/PromocionProducto.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vendedor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vendedor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vendedor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Cliente.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Cliente.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Comentario.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Comentario.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Compras.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Compras.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Controlador.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Controlador.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Fabrica.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Fabrica.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Promocion.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Promocion.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/PromocionProducto.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/PromocionProducto.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Vendedor.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/Vendedor.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LaboratorioFinal2.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/LaboratorioFinal2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/LaboratorioFinal2.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +202,7 @@
       <workItem from="1750803461423" duration="16916000" />
       <workItem from="1750849249160" duration="373000" />
       <workItem from="1750952815991" duration="5246000" />
-      <workItem from="1750974820336" duration="14246000" />
+      <workItem from="1750974820336" duration="15585000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion">
       <option name="closed" value="true" />
@@ -337,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750849311291</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implementacion">
+      <option name="closed" value="true" />
+      <created>1750989765311</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750989765311</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

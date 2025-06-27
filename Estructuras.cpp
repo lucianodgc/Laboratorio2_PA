@@ -2,6 +2,7 @@
 #include <ctime>
 
 Date::Date(int d, int m, int a) : dia(d), mes(m), año(a) {}
+Date::Date () {}
 Date::~Date() = default;
 
 int Date::getDia() const {return dia;}
@@ -28,6 +29,7 @@ bool Date::fechaEsMayorIgual(const Date& otraFecha) const {
 
 
 DataDirec::DataDirec(string const &nomCalle, int nroPuerta) : NomCalle(nomCalle), NroPuerta(nroPuerta) {}
+DataDirec::DataDirec() {}
 DataDirec::~DataDirec() = default;
 string DataDirec::toString() const {return "Nombre Calle: " + NomCalle + ", NroPuerta: " + to_string(NroPuerta);}
 string DataDirec::getNomCalle() const {return NomCalle;}

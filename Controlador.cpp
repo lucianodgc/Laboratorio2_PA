@@ -60,6 +60,7 @@ void Controlador::SeleccionarProducto(int codProd, int cantidad) {
         }
         if (promocionActual->productoYaAgregado(p)) {
             cout << "El producto ya existe en esta promoción" << endl;
+            return;
         }
 
         string nombre = promocionActual->getNombre();
