@@ -11,8 +11,9 @@ using namespace std;
 
 class Cliente:public Usuario {
 public:
-    Cliente(string Nickname, string Contraseña, Date Fnacimiento, DataDirec Direccion, string Ciudad);
-    virtual ~Cliente();
+    Cliente(string const &Nickname, string const &Contraseña, Date const &Fnacimiento,
+    DataDirec const &Direccion, string const &Ciudad);
+    ~Cliente() override;
     DataDirec getDireccion();
     string getCiudad();
 private:

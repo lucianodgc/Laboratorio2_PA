@@ -1,6 +1,7 @@
 
 #include "ProductoCompras.h"
 
-ProductoCompras::ProductoCompras() {}
+ProductoCompras::ProductoCompras(int cantidad, bool enviado) : Cantidad(cantidad), Enviado(enviado),
+Productos(nullptr), Compras(nullptr) {}
 
-ProductoCompras::~ProductoCompras() {}
+ProductoCompras::~ProductoCompras() = default;

@@ -11,9 +11,9 @@ using namespace std;
 
 class Comentario: public ICollectible {
 public:
-    Comentario();
-    virtual ~Comentario();
-    int getID();
+    Comentario(int id);
+    ~Comentario() override;
+    int getID() const;
     string getTexto();
     Date getFComentario();
 private:

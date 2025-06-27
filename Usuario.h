@@ -11,8 +11,8 @@ using namespace std;
 
 class Usuario: public ICollectible {
 public:
-    virtual ~Usuario();
-    Usuario(string Nickname, string Contraseña, Date Fnacimiento);
+    ~Usuario() override;
+    Usuario(string const &Nickname, string const &Contraseña, Date const &Fnacimiento);
     string getNickname();
     Date getNacimiento();
 protected:

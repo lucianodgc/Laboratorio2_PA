@@ -2,7 +2,6 @@
 #ifndef PROMOCIONPRODUCTO_H
 #define PROMOCIONPRODUCTO_H
 
-#include "IControlador.h"
 #include "Producto.h"
 
 using namespace std;
@@ -12,14 +11,14 @@ class Promocion;
 class PromocionProducto: public ICollectible {
 public:
     PromocionProducto(Producto* Producto, int cantidadMinima);
-    virtual ~PromocionProducto();
-    Producto* getProducto();
+
+    ~PromocionProducto() override;
+    Producto* getProducto() const;
     float getDescuento();
-    int getCantidadMinima();
+    int getCantidadMinima() const;
 private:
 	int CantMinima;
-    float DescuentoPct;
-    Promocion* Promocion;
+    Promocion* promocion;
     Producto* producto;
 };
 

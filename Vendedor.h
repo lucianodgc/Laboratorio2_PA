@@ -4,25 +4,27 @@
 
 #include "Interfaces.h"
 #include "Usuario.h"
-#include "Promocion.h"
 #include "Producto.h"
 #include <iostream>
 
+class Promocion;
 using namespace std;
 
 
 
 class Vendedor:public Usuario {
 public:
-    Vendedor(string Nickname, string Contraseña, Date Fnacimiento, string RUT);
-    virtual ~Vendedor();
+    Vendedor(string const &Nickname, string const &Contraseña, Date const &Fnacimiento, string const &RUT);
+    ~Vendedor() override;
     string getRUT();
-    void agregarProducto(Producto* p);
-    IDictionary* getProductos();
+    void agregarProducto(Producto* p) const;
+    IDictionary* getProductos() const;
+    void agregarPromocion(Promocion* promo) const;
+    Promocion* crearPromocion(string const &nombre, string const &descripcion, Date const &fechaVencimiento, int descuento) const;
 private:
     string RUT;
     IDictionary *Productos;
-    ICollection *Promociones;
+    IDictionary *Promociones;
 };
 
 

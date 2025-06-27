@@ -9,14 +9,14 @@ using namespace std;
 
 class Compras: public ICollectible {
 public:
-    Compras();
-    virtual ~Compras();
+    Compras(float montoFinal);
+    ~Compras() override;
     Date getFCompra();
-    float getMontoFinal();
+    float getMontoFinal() const;
 private:
     Date FCompra;
     float MontoFinal;
-    ICollection *ProdutoCompras;
+    ICollection* ProdutoCompras;
 
 };
 

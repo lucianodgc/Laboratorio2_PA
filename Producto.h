@@ -13,16 +13,16 @@ using namespace std;
 
 class Producto: public ICollectible {
 public:
-    Producto(int CodProd, string Nombre, float Precio, int stock,
-    string Descripcion, Cat Categoria, Vendedor* vendedor);
-    virtual ~Producto();
-    int getCodProd();
-    string getNombre();
-    float getPrecio();
-    int getStock();
-    string getDescripcion();
-    Cat getCategoria();
-    Vendedor* getVendedor();
+    Producto(int CodProd, string const &Nombre, float Precio, int stock,
+    string const &Descripcion, Cat Categoria, Vendedor* vendedor);
+    ~Producto() override;
+    int getCodProd() const;
+    string getNombre() const;
+    float getPrecio() const;
+    int getStock() const;
+    string getDescripcion() const;
+    Cat getCategoria() const;
+    Vendedor* getVendedor() const;
 private:
 	int CodProd;
     int Stock;

@@ -6,8 +6,6 @@ void cargarDatosPrueba();
 
 int main() {
 
-
-
     IControlador* ctrl = Fabrica::getControlador();
     int op, op1;
     do {
@@ -25,8 +23,8 @@ int main() {
         cout << "0. Salir\n";
         cout << "Seleccione: ";
         cin >> op; cin.ignore(); cout << endl;
-        string Nombre, Contraseña, Ciudad, NomCalle, RUT, Nick, Descripcion, categoria;
-        int d, m, a, NroPuerta, Stock, CodP, Desc;
+        string Nombre, Contraseña, Nick, Descripcion, categoria;
+        int d, m, a, Stock, CodP, Desc, cantidad;
         char z;
         float Precio;
         Cat Categoria;
@@ -39,13 +37,16 @@ int main() {
                 cout << "Fecha nacimiento (dd/mm/aa): "; cin >> d >> z >> m >> z >> a; cin.ignore();
 
                 if (op1 == 1) {
-                    cout << "Direccion (calle): "; getline(cin, NomCalle);
-                    cout << "Numero: "; cin >> NroPuerta; cin.ignore();
-                    cout << "Ciudad: "; getline(cin, Ciudad);
-                    ctrl->altaCliente(Nombre, Contraseña, Date(d, m, a), DataDirec(NomCalle, NroPuerta), Ciudad);
+                    string ciudad, nomCalle;
+                    int nroPuerta;
+                    cout << "Direccion (calle): "; getline(cin, nomCalle);
+                    cout << "Numero: "; cin >> nroPuerta; cin.ignore();
+                    cout << "Ciudad: "; getline(cin, ciudad);
+                    ctrl->altaCliente(Nombre, Contraseña, Date(d, m, a), DataDirec(nomCalle, nroPuerta), ciudad);
                 } else {
-                    cout << "RUT: "; getline(cin, RUT);
-                    ctrl->altaVendedor(Nombre, Contraseña, Date(d, m, a), RUT);
+                    string rut;
+                    cout << "RUT: "; getline(cin, rut);
+                    ctrl->altaVendedor(Nombre, Contraseña, Date(d, m, a), rut);
                 }
                 break;
             case 2:
@@ -78,7 +79,13 @@ int main() {
                 ctrl->listarVendedores();
                 cout << "\nSeleccione un vendedor: "; getline(cin, Nick);
                 ctrl->ListarProductos(Nick);
-                ctrl->CrearPromocion(Nombre, Descripcion, Date(d, m, a), Nick, Desc);
+                ctrl->CrearPromocion(Nombre, Descripcion, Date(d, m, a), Desc);
+                do {
+                    cout << "Ingrese el código del producto (0 para terminar): "; cin >> CodP; cin.ignore();
+                    if (CodP == 0) {break;}
+                    cout << "Cant.min para aplicar promoción: "; cin >> cantidad; cin.ignore();
+                    ctrl->SeleccionarProducto(CodP, cantidad);
+                } while (true);
                 break;
             case 6:
                 cargarDatosPrueba();
@@ -110,6 +117,10 @@ void cargarDatosPrueba() {
     ctrl->altaVendedor("Ignacio", "clave456", Date(5,5,1995),"123456789102");
     ctrl->altaVendedor("Thiago", "clave456", Date(5,5,1995),"123456789101");
     ctrl->AltaProducto("Pan", 1234, 12, "Qsy", Otros, "Ignacio");
+    ctrl->AltaProducto("Queso", 1234, 12, "Qsy", Otros, "Ignacio");
+    ctrl->AltaProducto("Papas", 1234, 12, "Qsy", Otros, "Ignacio");
     ctrl->AltaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->AltaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->AltaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
     cout << "\n[OK] Datos de prueba cargados.\n";
 }

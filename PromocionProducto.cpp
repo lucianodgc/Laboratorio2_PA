@@ -1,15 +1,12 @@
 
 #include "PromocionProducto.h"
-#include "Promocion.h"
 
 
 PromocionProducto::PromocionProducto(Producto* Producto, int cantidadMinima)
-    : producto(Producto), CantMinima(cantidadMinima) {}
+: CantMinima(cantidadMinima), promocion(nullptr), producto(Producto) {}
 
-PromocionProducto::~PromocionProducto() {}
+PromocionProducto::~PromocionProducto() = default;
 
-Producto* PromocionProducto::getProducto() {return producto;}
+Producto* PromocionProducto::getProducto() const {return producto;}
 
-float PromocionProducto::getDescuento() {return DescuentoPct;}
-
-int PromocionProducto::getCantidadMinima() {return CantMinima;}
+int PromocionProducto::getCantidadMinima() const {return CantMinima;}

@@ -1,11 +1,11 @@
 
 #include "Comentario.h"
 
-Comentario::Comentario() {}
+Comentario::Comentario(int id) : ID(id){Respuestas = new List();}
 
-Comentario::~Comentario() {}
+Comentario::~Comentario() = default;
 
-int Comentario::getID(){return ID;}
+int Comentario::getID() const {return ID;}
 
 string Comentario::getTexto(){return Texto;}
 

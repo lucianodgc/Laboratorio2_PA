@@ -1,13 +1,11 @@
 
 #include "Cliente.h"
 
-Cliente::Cliente(string Nickname, string Contraseña, Date Fnacimiento,
-DataDirec Direccion, string Ciudad):Usuario(Nickname, Contraseña, Fnacimiento) {
-    this->Ciudad = Ciudad;
-    this->Direccion = Direccion;
-}
+Cliente::Cliente(string const &Nickname, string const &Contraseña, Date const &Fnacimiento,
+DataDirec const &Direccion, string const &Ciudad) : Usuario(Nickname, Contraseña, Fnacimiento),
+Direccion(Direccion), Ciudad(Ciudad), Compras(new List()) {}
 
-Cliente::~Cliente() {}
+Cliente::~Cliente() = default;
 
 DataDirec Cliente::getDireccion() {return Direccion;}
 

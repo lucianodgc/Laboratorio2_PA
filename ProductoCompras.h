@@ -11,8 +11,8 @@ using namespace std;
 
 class ProductoCompras: public ICollectible {
 public:
-    ProductoCompras();
-    virtual ~ProductoCompras();
+    ProductoCompras(int cantidad, bool enviado);
+    ~ProductoCompras() override;
 private:
 	int Cantidad;
     bool Enviado;

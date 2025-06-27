@@ -2,22 +2,21 @@
 #include <ctime>
 
 Date::Date(int d, int m, int a) : dia(d), mes(m), año(a) {}
-Date::Date(){}
-Date::~Date() {}
+Date::~Date() = default;
 
-int Date::getDia() {return dia;}
-int Date::getMes() {return mes;}
-int Date::getAño() {return año;}
+int Date::getDia() const {return dia;}
+int Date::getMes() const {return mes;}
+int Date::getAño() const {return año;}
 
-string Date::toString() {return to_string(dia) + "/" + to_string(mes) + "/" + to_string(año);}
+string Date::toString() const {return to_string(dia) + "/" + to_string(mes) + "/" + to_string(año);}
 
 Date Date::obtenerFechaActual() {
     time_t t = time(nullptr);
     tm* now = localtime(&t);
-    return Date(now->tm_mday, now->tm_mon + 1, now->tm_year + 1900);
+    return {now->tm_mday, now->tm_mon + 1, now->tm_year + 1900};
 }
 
-bool Date::fechaEsMayorIgual(const Date& otraFecha) {
+bool Date::fechaEsMayorIgual(const Date& otraFecha) const {
     if (this->año > otraFecha.año) return true;
     if (this->año < otraFecha.año) return false;
 
@@ -28,12 +27,11 @@ bool Date::fechaEsMayorIgual(const Date& otraFecha) {
 }
 
 
-DataDirec::DataDirec(const string& nomCalle, int nroPuerta) : NomCalle(nomCalle), NroPuerta(nroPuerta) {}
-DataDirec::DataDirec() {}
-DataDirec::~DataDirec() {}
-string DataDirec::toString() {return "Nombre Calle: " + NomCalle + ", NroPuerta: " + to_string(NroPuerta);}
-string DataDirec::getNomCalle() {return NomCalle;}
-int DataDirec::getNroPuerta() {return NroPuerta;}
+DataDirec::DataDirec(string const &nomCalle, int nroPuerta) : NomCalle(nomCalle), NroPuerta(nroPuerta) {}
+DataDirec::~DataDirec() = default;
+string DataDirec::toString() const {return "Nombre Calle: " + NomCalle + ", NroPuerta: " + to_string(NroPuerta);}
+string DataDirec::getNomCalle() const {return NomCalle;}
+int DataDirec::getNroPuerta() const {return NroPuerta;}
 
 Cat stringToCat(const string& categoria) {
     if (categoria == "ropa" || categoria == "Ropa" || categoria == "ROPA") return Ropa;

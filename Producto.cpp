@@ -1,22 +1,22 @@
 
 #include "Producto.h"
 
-Producto::Producto(int CodProd, string Nombre, float Precio, int stock, string Descripcion,
-Cat Categoria, Vendedor* vendedor) : CodProd(CodProd), Nombre(Nombre), Precio(Precio), Stock(stock),
+Producto::Producto(int CodProd, string const &Nombre, float Precio, int stock, string const &Descripcion,
+Cat Categoria, Vendedor* vendedor) : CodProd(CodProd), Stock(stock), Precio(Precio), Nombre(Nombre),
 Descripcion(Descripcion), Categoria(Categoria), vendedor(vendedor) {Comentarios = new OrderedDictionary();}
 
-Producto::~Producto() {}
+Producto::~Producto() = default;
 
-int Producto::getCodProd(){return CodProd;}
+int Producto::getCodProd() const {return CodProd;}
 
-string Producto::getNombre(){return Nombre;}
+string Producto::getNombre() const {return Nombre;}
 
-float Producto::getPrecio(){return Precio;}
+float Producto::getPrecio() const {return Precio;}
 
-int Producto::getStock(){return Stock;}
+int Producto::getStock() const {return Stock;}
 
-string Producto::getDescripcion(){return Descripcion;}
+string Producto::getDescripcion() const {return Descripcion;}
 
-Cat Producto::getCategoria(){return Categoria;}
+Cat Producto::getCategoria() const {return Categoria;}
 
-Vendedor* Producto::getVendedor() {return vendedor;}
+Vendedor* Producto::getVendedor() const {return vendedor;}

@@ -21,6 +21,7 @@ public:
     Date getFVencimiento();
     int getDescuento();
     ICollection* getPromocionProducto();
+    bool productoYaAgregado(Producto* p);
 private:
 	string Nombre;
     string Descripcion;
