@@ -27,7 +27,7 @@ public:
 
     void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
     void ListarPromosVigentes() override;
-    void VerInfoPromo() override;
+    void VerInfoPromo(string nombre) override;
 
     void AltaProducto(string Nombre, float Precio, int Stock,
     string Descripcion, Cat Categoria, string NicknameVendedor) override;

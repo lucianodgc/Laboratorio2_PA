@@ -7,7 +7,7 @@ void cargarDatosPrueba();
 int main() {
 
     IControlador* ctrl = Fabrica::getControlador();
-    int op, op1;
+    int op;
     do {
         cout << "\n===== MENU =====\n";
         cout << "1. Alta de usuario\n";
@@ -15,28 +15,29 @@ int main() {
         cout << "3. Alta de producto\n";
         cout << "4. Consultar producto\n";
         cout << "5. Crear promoción\n";
-        cout << "6. Realizar compra\n";
-        cout << "7. Dejar comentario\n";
-        cout << "8. Eliminar comentario\n";
-        cout << "9. Enviar producto\n";
-        cout << "10. Expediente de Usuario\n";
+        cout << "6. Consultar promoción\n";
+        cout << "7. Realizar compra\n";
+        cout << "8. Dejar comentario\n";
+        cout << "9. Eliminar comentario\n";
+        cout << "10. Enviar producto\n";
+        cout << "11. Expediente de Usuario\n";
         cout << "0. Salir\n";
         cout << "Seleccione: ";
         cin >> op; cin.ignore(); cout << endl;
         string Nombre, Contraseña, Nick, Descripcion, categoria;
         int d, m, a, Stock, CodP, Desc, cantidad;
-        char z;
+        char z, op1;
         float Precio;
         Cat Categoria;
 
         switch (op) {
             case 1:
-                cout << "Ingresar Cliente(1) o Ingresar Vendedor(2): "; cin >> op1; cin.ignore();
+                cout << "Ingresar Cliente(1) o Ingresar Vendedor(2): "; cin >> op; cin.ignore();
                 cout << "Nickname: "; getline(cin, Nombre);
                 cout << "Contraseña: "; getline(cin, Contraseña);
                 cout << "Fecha nacimiento (dd/mm/aa): "; cin >> d >> z >> m >> z >> a; cin.ignore();
 
-                if (op1 == 1) {
+                if (op == 1) {
                     string ciudad, nomCalle;
                     int nroPuerta;
                     cout << "Direccion (calle): "; getline(cin, nomCalle);
@@ -48,9 +49,13 @@ int main() {
                     cout << "RUT: "; getline(cin, rut);
                     ctrl->altaVendedor(Nombre, Contraseña, Date(d, m, a), rut);
                 }
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 2:
                 ctrl->listarUsuarios();
+                cout << "Presione Enter para continuar...";
+                cin.get();
                 break;
             case 3:
                 cout << "Vendedores: " << endl;
@@ -63,12 +68,16 @@ int main() {
                 cout << "Categoria(ropa, electrodomésticos, otros): "; getline(cin, categoria);
                 Categoria = stringToCat(categoria);
                 ctrl->AltaProducto(Nombre, Precio, Stock, Descripcion, Categoria, Nick);
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 4:
                 cout << "Productos: " << endl;
                 ctrl->ListarProductos();
-                cout << "\nSeleccione un producto: "; cin >> CodP;
+                cout << "\nSeleccione un producto: "; cin >> CodP; cin.ignore();
                 ctrl->mostrarDatosProducto(CodP);
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 5:
                 cout << "Ingrese datos de la promoción: \nNombre:"; getline(cin, Nombre);
@@ -86,9 +95,19 @@ int main() {
                     cout << "Cant.min para aplicar promoción: "; cin >> cantidad; cin.ignore();
                     ctrl->SeleccionarProducto(CodP, cantidad);
                 } while (true);
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 6:
-                cargarDatosPrueba();
+                cout << "Promociones vigentes: " << endl << endl;
+                ctrl->ListarPromosVigentes();
+                cout << "Desea ver los detalles de la promoción (S/N): " << endl; cin >> op1; cin.ignore();
+                if (op1 == 'S' || op1 == 's') {
+                    cout << "Ingrese nombre de la promocion: "; getline(cin, Nombre);
+                    ctrl->VerInfoPromo(Nombre);
+                }
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 7:
                 cargarDatosPrueba();
@@ -100,6 +119,9 @@ int main() {
                 cargarDatosPrueba();
                 break;
             case 10:
+                cargarDatosPrueba();
+                break;
+            case 11:
                 cargarDatosPrueba();
                 break;
             default:
@@ -122,5 +144,13 @@ void cargarDatosPrueba() {
     ctrl->AltaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
     ctrl->AltaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
     ctrl->AltaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
+    /*ctrl->ListarProductos("Ignacio");
+    ctrl->CrearPromocion("Promo1", "Descripcion", Date(27, 8, 2025), 20);
+    ctrl->SeleccionarProducto(1, 10);
+    ctrl->SeleccionarProducto(2, 12);
+    ctrl->ListarProductos("Thiago");
+    ctrl->CrearPromocion("Promo2", "Descripcion", Date(28, 8, 2025), 20);
+    ctrl->SeleccionarProducto(4, 15);
+    ctrl->SeleccionarProducto(6, 14);*/
     cout << "\n[OK] Datos de prueba cargados.\n";
 }

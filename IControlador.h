@@ -21,7 +21,7 @@ public:
     Date FVencimiento, int Descuento) = 0;
     virtual void SeleccionarProducto(int codProd, int cantidad) = 0;
     virtual void ListarPromosVigentes() = 0;
-    virtual void VerInfoPromo() = 0;
+    virtual void VerInfoPromo(string nombre) = 0;
     virtual void altaCliente(string Nombre, string Contraseña,
     Date FNacimiento, DataDirec Direccion, string Ciudad) = 0;
     virtual void altaVendedor(string Nombre, string Contraseña,

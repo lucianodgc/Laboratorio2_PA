@@ -16,16 +16,14 @@ void Controlador::RealizarComentario(string texto) {}
 void Controlador::ResponderComentario(int id, string texto) {}
 
 int Controlador::generarCodigoProducto() {
-    int cod = 0;
+    int maxCod = 0;
     for (IIterator* it = Productos->getIterator(); it->hasCurrent(); it->next()) {
-        auto* P = dynamic_cast<Producto *>(it->getCurrent());
-        if (P == nullptr) {
-            cod = 0;
-            break;
+        auto* prod = dynamic_cast<Producto *>(it->getCurrent());
+        if (prod != nullptr && prod->getCodProd() > maxCod) {
+            maxCod = prod->getCodProd();
         }
-        cod = P->getCodProd();
     }
-    return cod+1;
+    return maxCod + 1;
 }
 
 
@@ -39,6 +37,7 @@ Date FVencimiento, int Descuento) {
         cout << "\nVendedor no existe o no es válido.";
         return;
     }
+
     delete key;
     Promocion* promo = vendedorSesion->crearPromocion(Nombre, Descripcion, FVencimiento, Descuento);
     key = new String(Nombre.c_str());
@@ -129,8 +128,7 @@ void Controlador::AltaProducto(string Nombre, float Precio, int Stock,
 }
 
 void Controlador::listarUsuarios() {
-    IIterator* it;
-    for (it = Usuarios->getIterator();it->hasCurrent();it->next()) {
+    for (IIterator* it = Usuarios->getIterator();it->hasCurrent();it->next()) {
         auto* u = dynamic_cast<Usuario*>(it->getCurrent());
         cout << "Nickname: " << u->getNickname() << "\nF.Nacimiento: " << u->getNacimiento().toString() << endl;
         auto* v = dynamic_cast<Vendedor*>(u);
@@ -144,26 +142,22 @@ void Controlador::listarUsuarios() {
             }
         }
     }
-    delete it;
 }
 
 void Controlador::listarVendedores() {
-    IIterator* it;
-    for (it = Usuarios->getIterator(); it->hasCurrent(); it->next()) {
+
+    for (IIterator* it = Usuarios->getIterator(); it->hasCurrent(); it->next()) {
         auto* u = dynamic_cast<Usuario*>(it->getCurrent());
         auto* v = dynamic_cast<Vendedor*>(u);
         if (v != nullptr) cout << "Nickname: " << v->getNickname() << endl;
     }
-    delete it;
 }
 
 void Controlador::ListarProductos() {
-    IIterator* it;
-    for (it = Productos->getIterator(); it->hasCurrent(); it->next()) {
+    for (IIterator* it = Productos->getIterator(); it->hasCurrent(); it->next()) {
         auto* p = dynamic_cast<Producto*>(it->getCurrent());
         cout << "Código: " << p->getCodProd() << " - " << p->getNombre() << endl;
     }
-    delete it;
 }
 
 void Controlador::ListarProductos(string NicknameVendedor) {
@@ -171,16 +165,26 @@ void Controlador::ListarProductos(string NicknameVendedor) {
     auto* vendedor = dynamic_cast<Vendedor*>(Usuarios->find(key));
     delete key;
     IDictionary* Productos = vendedor->getProductos();
-    IIterator* it;
-    for (it = Productos->getIterator(); it->hasCurrent(); it->next()) {
+
+    for (IIterator* it = Productos->getIterator(); it->hasCurrent(); it->next()) {
         if (auto* p = dynamic_cast<Producto*>(it->getCurrent()))
             cout << "Código: " << p->getCodProd() << " - " << p->getNombre() << endl;
     }
-    delete it;
     vendedorSesion = vendedor;
 }
 
 void Controlador::ListarPromosVigentes() {
+    Date const hoy = Date::obtenerFechaActual();
+
+    for (IIterator* it = Promociones->getIterator(); it->hasCurrent(); it->next()) {
+        auto* p = dynamic_cast<Promocion*>(it->getCurrent());
+        if (p->getFVencimiento().fechaEsMayorIgual(hoy)) {
+            cout << "Nombre: " << p->getNombre() << endl;
+            cout << "Descripción: " << p->getDescripcion() << endl;
+            cout << "Descuento: " << p->getDescuento() << endl;
+            cout << "Fecha de vencimiento: " << p->getFVencimiento().toString() << endl << endl;
+        }
+    }
 }
 
 void Controlador::mostrarDatosProducto(int CodProd) {
@@ -205,11 +209,30 @@ void Controlador::mostrarDatosProducto(int CodProd) {
     else cout << "Categoría: Otros" << endl;
 
     Vendedor* v = p->getVendedor();
-    if (v != nullptr)
-        cout << "Vendedor: " << v->getNickname() << endl;
+    if (v != nullptr) cout << "Vendedor: " << v->getNickname() << endl;
 }
 
-void Controlador::VerInfoPromo() {
+void Controlador::VerInfoPromo(string nombre) {
+    IKey* ik = new String(nombre.c_str());
+    auto* promo = dynamic_cast<Promocion*>(Promociones->find(ik));
+    delete ik;
+    ICollection* col = promo->getPromocionProducto();
+    Producto* prod = nullptr;
+    cout << "Productos: " << endl;
+    for (IIterator* it = col->getIterator(); it->hasCurrent(); it->next()) {
+        auto* p = dynamic_cast<PromocionProducto*>(it->getCurrent());
+        prod = p->getProducto();
+        cout << "\nDatos del Producto: " << endl;
+        cout << "Nombre: " << prod->getNombre() << endl;
+        cout << "Stock: " << prod->getStock() << endl;
+        cout << "Categoria: " << prod->getCategoria() << endl;
+        cout << "Descripción: " << prod->getDescripcion() << endl;
+    }
+    Vendedor* vend = prod->getVendedor();
+    cout << "\nDatos del Vendedor: " << endl;
+    cout << "Nombre: " << vend->getNickname() << endl;
+    cout << "RUT: " << vend->getRUT() << endl;
+    cout << "Fecha de Nacimiento: " << vend->getNacimiento().toString() << endl;
 }
 
 bool Controlador::productoEnPromocionVigente(Producto* &producto) const {
