@@ -25,23 +25,24 @@ public:
     void listarUsuarios() override;
     void listarVendedores() override;
 
-    void CrearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
-    void ListarPromosVigentes() override;
-    void VerInfoPromo(string nombre) override;
+    void crearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
+    void listarPromosVigentes() override;
+    void verInfoPromo(string nombre) override;
 
-    void AltaProducto(string Nombre, float Precio, int Stock,
+    void altaProducto(string Nombre, float Precio, int Stock,
     string Descripcion, Cat Categoria, string NicknameVendedor) override;
 
-    void ListarProductos() override;
-    void ListarProductos(string NicknameVendedor) override;
+    void listarProductos() override;
+    void listarProductos(string NicknameVendedor) override;
     void mostrarDatosProducto(int CodProd) override;
+    void listarNickUsuarios() override;
 
 
-    void RealizarComentario(string Texto) override;
-    void ResponderComentario(int ID, string Texto) override;
+    void realizarComentario(string Texto) override;
+    void responderComentario(int ID, string Texto) override;
     int generarCodigoProducto() override;
     bool productoEnPromocionVigente(Producto* &producto) const ;
-    void SeleccionarProducto(int codProd, int cantidad) override;
+    void seleccionarProducto(int codProd, int cantidad) override;
     bool productoYaAgregado(Producto* p);
 private:
     IDictionary* Usuarios;

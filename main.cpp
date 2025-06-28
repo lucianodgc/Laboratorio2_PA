@@ -24,17 +24,17 @@ int main() {
         cout << "0. Salir\n";
         cout << "Seleccione: ";
         cin >> op; cin.ignore(); cout << endl;
-        string Nombre, Contraseña, Nick, Descripcion, categoria;
-        int d, m, a, Stock, CodP, Desc, cantidad;
+        string nombre, contraseña, nick, descripcion, categoria, texto;
+        int d, m, a, stock, codP, descuento, cantidad;
         char z, op1;
-        float Precio;
+        float precio;
         Cat Categoria;
 
         switch (op) {
             case 1:
                 cout << "Ingresar Cliente(1) o Ingresar Vendedor(2): "; cin >> op; cin.ignore();
-                cout << "Nickname: "; getline(cin, Nombre);
-                cout << "Contraseña: "; getline(cin, Contraseña);
+                cout << "Nickname: "; getline(cin, nombre);
+                cout << "Contraseña: "; getline(cin, contraseña);
                 cout << "Fecha nacimiento (dd/mm/aa): "; cin >> d >> z >> m >> z >> a; cin.ignore();
 
                 if (op == 1) {
@@ -43,11 +43,11 @@ int main() {
                     cout << "Direccion (calle): "; getline(cin, nomCalle);
                     cout << "Numero: "; cin >> nroPuerta; cin.ignore();
                     cout << "Ciudad: "; getline(cin, ciudad);
-                    ctrl->altaCliente(Nombre, Contraseña, Date(d, m, a), DataDirec(nomCalle, nroPuerta), ciudad);
+                    ctrl->altaCliente(nombre, contraseña, Date(d, m, a), DataDirec(nomCalle, nroPuerta), ciudad);
                 } else {
                     string rut;
                     cout << "RUT: "; getline(cin, rut);
-                    ctrl->altaVendedor(Nombre, Contraseña, Date(d, m, a), rut);
+                    ctrl->altaVendedor(nombre, contraseña, Date(d, m, a), rut);
                 }
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
@@ -60,51 +60,51 @@ int main() {
             case 3:
                 cout << "Vendedores: " << endl;
                 ctrl->listarVendedores();
-                cout << "\nSeleccione un vendedor: "; getline(cin, Nick);
-                cout << "Ingrese datos del producto: \nNombre:"; getline(cin, Nombre);
-                cout << "Precio: "; cin >> Precio; cin.ignore();
-                cout << "Cantidad en stock: "; cin >> Stock; cin.ignore();
-                cout << "Descripcion: "; getline(cin, Descripcion);
+                cout << "\nSeleccione un vendedor: "; getline(cin, nick);
+                cout << "Ingrese datos del producto: \nNombre:"; getline(cin, nombre);
+                cout << "Precio: "; cin >> precio; cin.ignore();
+                cout << "Cantidad en stock: "; cin >> stock; cin.ignore();
+                cout << "Descripcion: "; getline(cin, descripcion);
                 cout << "Categoria(ropa, electrodomésticos, otros): "; getline(cin, categoria);
                 Categoria = stringToCat(categoria);
-                ctrl->AltaProducto(Nombre, Precio, Stock, Descripcion, Categoria, Nick);
+                ctrl->altaProducto(nombre, precio, stock, descripcion, Categoria, nick);
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
             case 4:
                 cout << "Productos: " << endl;
-                ctrl->ListarProductos();
-                cout << "\nSeleccione un producto: "; cin >> CodP; cin.ignore();
-                ctrl->mostrarDatosProducto(CodP);
+                ctrl->listarProductos();
+                cout << "\nSeleccione un producto: "; cin >> codP; cin.ignore();
+                ctrl->mostrarDatosProducto(codP);
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
             case 5:
-                cout << "Ingrese datos de la promoción: \nNombre:"; getline(cin, Nombre);
-                cout << "Descripcion: "; getline(cin, Descripcion);
+                cout << "Ingrese datos de la promoción: \nNombre:"; getline(cin, nombre);
+                cout << "Descripcion: "; getline(cin, descripcion);
                 cout << "F.Vencimiento (dd/mm/aa): "; cin >> d >> z >> m >> z >> a; cin.ignore();
-                cout << "Descuento de la promoción: "; cin >> Desc; cin.ignore();
+                cout << "Descuento de la promoción: "; cin >> descuento; cin.ignore();
                 cout << endl;
                 ctrl->listarVendedores();
-                cout << "\nSeleccione un vendedor: "; getline(cin, Nick);
-                ctrl->ListarProductos(Nick);
-                ctrl->CrearPromocion(Nombre, Descripcion, Date(d, m, a), Desc);
+                cout << "\nSeleccione un vendedor: "; getline(cin, nick);
+                ctrl->listarProductos(nick);
+                ctrl->crearPromocion(nombre, descripcion, Date(d, m, a), descuento);
                 do {
-                    cout << "Ingrese el código del producto (0 para terminar): "; cin >> CodP; cin.ignore();
-                    if (CodP == 0) {break;}
+                    cout << "Ingrese el código del producto (0 para terminar): "; cin >> codP; cin.ignore();
+                    if (codP == 0) {break;}
                     cout << "Cant.min para aplicar promoción: "; cin >> cantidad; cin.ignore();
-                    ctrl->SeleccionarProducto(CodP, cantidad);
+                    ctrl->seleccionarProducto(codP, cantidad);
                 } while (true);
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
             case 6:
                 cout << "Promociones vigentes: " << endl << endl;
-                ctrl->ListarPromosVigentes();
+                ctrl->listarPromosVigentes();
                 cout << "Desea ver los detalles de la promoción (S/N): " << endl; cin >> op1; cin.ignore();
                 if (op1 == 'S' || op1 == 's') {
-                    cout << "Ingrese nombre de la promocion: "; getline(cin, Nombre);
-                    ctrl->VerInfoPromo(Nombre);
+                    cout << "Ingrese nombre de la promocion: "; getline(cin, nombre);
+                    ctrl->verInfoPromo(nombre);
                 }
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
@@ -113,7 +113,18 @@ int main() {
                 cargarDatosPrueba();
                 break;
             case 8:
-                cargarDatosPrueba();
+                ctrl->listarNickUsuarios();
+                cout << "\nSeleccione un usuario: "; getline(cin, nick);
+                ctrl->listarProductos();
+                cout << "\nSeleccione un producto: "; cin >> codP; cin.ignore();
+                cout << "\nRealizar comentario nuevo o responder comentario existente: "
+                        "(Nuevo: 1, Existente: 2)"; cin >> op; cin.ignore();
+                if (op == 1) {
+                    cout << "\nIngrese texto del comentario: "; getline(cin, texto);
+                    ctrl->realizarComentario(texto);
+                } else ctrl->();
+                cout << "\nPresione Enter para continuar...";
+                cin.get();
                 break;
             case 9:
                 cargarDatosPrueba();
@@ -138,12 +149,12 @@ void cargarDatosPrueba() {
     ctrl->altaCliente("Luciano", "clave123", Date(10,6,2000), DataDirec("Calle Falsa", 1234), "Maldonado");
     ctrl->altaVendedor("Ignacio", "clave456", Date(5,5,1995),"123456789102");
     ctrl->altaVendedor("Thiago", "clave456", Date(5,5,1995),"123456789101");
-    ctrl->AltaProducto("Pan", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->AltaProducto("Queso", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->AltaProducto("Papas", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->AltaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
-    ctrl->AltaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
-    ctrl->AltaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Pan", 1234, 12, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Queso", 1234, 12, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Papas", 1234, 12, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
     /*ctrl->ListarProductos("Ignacio");
     ctrl->CrearPromocion("Promo1", "Descripcion", Date(27, 8, 2025), 20);
     ctrl->SeleccionarProducto(1, 10);
