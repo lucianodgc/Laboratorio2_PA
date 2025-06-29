@@ -11,8 +11,22 @@ DataDirec Cliente::getDireccion() {return Direccion;}
 
 string Cliente::getCiudad() {return Ciudad;}
 
-void Cliente::crearCompra(float montoFinal, Date fCompra) const {
-    auto* comp = new Compras(montoFinal, fCompra);
-    compras->add(comp);
+Compras* Cliente::crearCompra() const {
+    auto* comp = new Compras(0, Date());
+    return comp;
 }
 
+void Cliente::agregarCompra(Compras *comp) const {
+    Date const hoy = Date::obtenerFechaActual();
+    ICollection* col = comp->getProductoCompras();
+    Producto* prod = nullptr;
+    float montoFinal = 0;
+    for (IIterator* it = col->getIterator(); it->hasCurrent(); it->next()) {
+        auto* pp = dynamic_cast<ProductoCompras*>(it->getCurrent());
+        prod = pp->getProducto();
+        montoFinal += prod->getPrecio() * pp->getCantidad();
+    }
+    comp->finalizarCompra(hoy, montoFinal);
+    compras->add(comp);
+    cout << "Compra concretada correctamente" << endl;
+}

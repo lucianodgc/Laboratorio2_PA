@@ -17,7 +17,8 @@ public:
     ~Cliente() override;
     DataDirec getDireccion();
     string getCiudad();
-    void crearCompra(float montoFinal, Date fCompra) const;
+    Compras* crearCompra() const;
+    void agregarCompra(Compras *comp) const;
 private:
 	DataDirec Direccion;
     string Ciudad;

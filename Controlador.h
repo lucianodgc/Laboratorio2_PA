@@ -51,7 +51,9 @@ public:
     void listarNickClientes() override;
     void agregarProducto(int codProd, int cantidad) override;
     void confirmarYMostrarCompra() override;
-    void seleccionarCliente(string nick) override;
+
+    void crearCompra(string nick) override;
+
 private:
     IDictionary* usuarios;
     IDictionary* promociones;

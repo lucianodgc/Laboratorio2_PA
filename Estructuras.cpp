@@ -45,3 +45,4 @@ Cat stringToCat(const string& categoria) {
     return Otros;
 
 }
+

@@ -37,6 +37,6 @@ public:
     virtual void listarNickClientes() = 0;
     virtual void agregarProducto(int codProd, int cantidad) = 0;
     virtual void confirmarYMostrarCompra() = 0;
-    virtual void seleccionarCliente(string nick) = 0;
+    virtual void crearCompra(string nick) = 0;
 };
 #endif

@@ -18,9 +18,9 @@ int main() {
         cout << "6. Consultar promoción\n";
         cout << "7. Realizar compra\n";
         cout << "8. Dejar comentario\n";
-        cout << "9. Eliminar comentario\n";
-        cout << "10. Enviar producto\n";
-        cout << "11. Expediente de Usuario\n";
+        cout << "9. Eliminar comentario\n (terminar)";
+        cout << "10. Enviar producto\n (terminar)";
+        cout << "11. Expediente de Usuario\n (terminar) ";
         cout << "0. Salir\n";
         cout << "Seleccione: ";
         cin >> op; cin.ignore(); cout << endl;
@@ -112,18 +112,16 @@ int main() {
             case 7:
                 ctrl->listarNickClientes();
                 cout << "\nSeleccione un cliente: "; getline(cin, nick);
-                ctrl->seleccionarCliente(nick);
+                ctrl->crearCompra(nick);
                 ctrl->listarProductos();
                 do {
-                    cout << "\nDesea agreagar productos a la compra? (S/N)" << endl; cin >> op1; cin.ignore();
+                    cout << "\nDesea agreagar productos a la compra? (S/N)"; cin >> op1; cin.ignore();
                     if (op1 != 'S' && op1 != 's') break;
                     cout << "Ingrese codigo de producto: "; cin >> codP; cin.ignore();
                     cout << "Ingrese cantidad deseada: "; cin >> cantidad; cin.ignore();
                     ctrl->agregarProducto(codP, cantidad);
                 } while (true);
-                cout << "Confirmar compra? (S/N)" << endl; cin >> op1; cin.ignore();
-                if (op1 == 'S' || op1 == 's') ctrl->confirmarYMostrarCompra();
-                else cout << "Compra cancelada";
+                ctrl->confirmarYMostrarCompra();
                 cout << "\nPresione Enter para continuar...";
                 break;
             case 8:
@@ -181,17 +179,19 @@ void cargarDatosPrueba() {
     ctrl->altaCliente("Luciano", "clave123", Date(10,6,2000), DataDirec("Calle Falsa", 1234), "Maldonado");
     ctrl->altaVendedor("Ignacio", "clave456", Date(5,5,1995),"123456789102");
     ctrl->altaVendedor("Thiago", "clave456", Date(5,5,1995),"123456789101");
-    ctrl->altaProducto("Pan", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Queso", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Papas", 1234, 12, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
-    ctrl->altaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
-    ctrl->altaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Pan", 32, 20, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Queso", 12, 50, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Papas", 34, 30, "Qsy", Otros, "Ignacio");
+    ctrl->altaProducto("Vino", 124, 45, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Lechuga", 24, 70, "Qsy", Otros, "Thiago");
+    ctrl->altaProducto("Tomate", 14, 40, "Qsy", Otros, "Thiago");
     ctrl->seleccionarUsuario("Luciano");
     ctrl->seleccionarProducto(1);
     ctrl->realizarComentario("xdxdxd");
     ctrl->seleccionarUsuario("Ignacio");
     ctrl->responderComentario(1, "pepe");
+    ctrl->seleccionarUsuario("Luciano");
+    ctrl->responderComentario(2, "papa");
     /*ctrl->ListarProductos("Ignacio");
     ctrl->CrearPromocion("Promo1", "Descripcion", Date(27, 8, 2025), 20);
     ctrl->SeleccionarProducto(1, 10);

@@ -15,3 +15,8 @@ void Compras::agregarProducto(Producto* producto, int cantidad) {
 }
 
 ICollection* Compras::getProductoCompras() const {return productoCompras;}
+
+void Compras::finalizarCompra(const Date& fecha, float monto) {
+    this->FCompra = fecha;
+    this->MontoFinal = monto;
+}

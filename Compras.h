@@ -16,6 +16,7 @@ public:
     float getMontoFinal() const;
     void agregarProducto(Producto* producto, int cantidad);
     ICollection* getProductoCompras() const;
+    void finalizarCompra(const Date& fecha, float montoFinal);
 private:
     Date FCompra;
     float MontoFinal;
