@@ -6,6 +6,8 @@
  */
 
 #include "IIterator.h"
+#include "IKey.h"
+
 #ifndef _ICOLLECTION_H
 #define	_ICOLLECTION_H
 
@@ -48,6 +50,7 @@ public:
     virtual IIterator *getIterator() = 0;
     
     virtual ~ICollection();
+
 };
 
 #endif	/* _ICOLLECTION_H */

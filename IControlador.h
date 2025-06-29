@@ -20,6 +20,8 @@ public:
     virtual void crearPromocion(string Nombre, string Descripcion,
     Date FVencimiento, int Descuento) = 0;
     virtual void seleccionarProducto(int codProd, int cantidad) = 0;
+    virtual void seleccionarProducto(int codProd) = 0;
+    virtual void seleccionarUsuario(string nombre) = 0;
     virtual void listarPromosVigentes() = 0;
     virtual void verInfoPromo(string nombre) = 0;
     virtual void altaCliente(string Nombre, string Contraseña,
@@ -29,6 +31,13 @@ public:
     virtual void listarUsuarios() = 0;
     virtual void listarVendedores() = 0;
     virtual void listarNickUsuarios() = 0;
+    virtual void listarComentarios() = 0;
     virtual int generarCodigoProducto() = 0;
+    virtual void listarComentarios(string nick) = 0;
+    virtual void eliminarComentarios(int id) = 0;
+    virtual void listarNickClientes() = 0;
+    virtual void agregarProducto(int codProd, int cantidad) = 0;
+    virtual void confirmarYMostrarCompra() = 0;
+    virtual void seleccionarCliente(string nick) = 0;
 };
 #endif

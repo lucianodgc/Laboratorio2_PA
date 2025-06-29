@@ -4,6 +4,7 @@
 
 #include "Estructuras.h"
 #include "Interfaces.h"
+#include "Comentario.h"
 
 using namespace std;
 
@@ -15,6 +16,10 @@ public:
     Usuario(string const &Nickname, string const &Contraseña, Date const &Fnacimiento);
     string getNickname();
     Date getNacimiento();
+    void agregarComentario(int id, string texto, Date fComentario, Producto* producto, Usuario* usuario) const;
+    int generarCodigoComentario() const;
+    IDictionary* getComentarios() const;
+    void eliminarComentario(int id) const;
 protected:
     string Nickname;
     string Contraseña;

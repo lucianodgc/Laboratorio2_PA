@@ -40,18 +40,30 @@ public:
 
     void realizarComentario(string Texto) override;
     void responderComentario(int ID, string Texto) override;
+    void listarComentarios() override;
     int generarCodigoProducto() override;
     bool productoEnPromocionVigente(Producto* &producto) const ;
     void seleccionarProducto(int codProd, int cantidad) override;
+    void seleccionarProducto(int codProd) override;
+    void seleccionarUsuario(string nombre) override;
     bool productoYaAgregado(Producto* p);
+    void listarComentarios(string nick) override;
+    void eliminarComentarios(int id) override;
+    void listarNickClientes() override;
+    void agregarProducto(int codProd, int cantidad) override;
+    void confirmarYMostrarCompra() override;
+    void seleccionarCliente(string nick) override;
 private:
-    IDictionary* Usuarios;
-    IDictionary* Promociones;
-    IDictionary* Productos;
-    IDictionary* Compras;
-    IDictionary* Comentarios;
-    Vendedor* vendedorSesion = nullptr;
+    IDictionary* usuarios;
+    IDictionary* promociones;
+    IDictionary* productos;
+    IDictionary* compras;
+    Vendedor* vendedorActual = nullptr;
+    Cliente* clienteActual = nullptr;
     Promocion* promocionActual = nullptr;
+    Producto* productoActual = nullptr;
+    Usuario* usuarioActual = nullptr;
+    Compras* compraActual = nullptr;
 };
 
 

@@ -3,7 +3,7 @@
 #define PRODUCTOCOMPRAS_H
 
 #include "Producto.h"
-#include "Compras.h"
+class Compras;
 
 using namespace std;
 
@@ -11,13 +11,16 @@ using namespace std;
 
 class ProductoCompras: public ICollectible {
 public:
-    ProductoCompras(int cantidad, bool enviado);
+    ProductoCompras(Producto* producto, int cantidad);
     ~ProductoCompras() override;
+    int getCantidad() const;
+    bool getEnviado() const;
+    Producto* getProducto() const;
 private:
 	int Cantidad;
     bool Enviado;
-    Producto *Productos;
-    Compras *Compras;
+    Producto* producto;
+    Compras* compras;
 };
 
 

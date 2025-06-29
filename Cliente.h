@@ -4,6 +4,7 @@
 
 #include "Interfaces.h"
 #include "Usuario.h"
+#include "Compras.h"
 
 using namespace std;
 
@@ -16,10 +17,11 @@ public:
     ~Cliente() override;
     DataDirec getDireccion();
     string getCiudad();
+    void crearCompra(float montoFinal, Date fCompra) const;
 private:
 	DataDirec Direccion;
     string Ciudad;
-    ICollection* Compras;
+    ICollection* compras;
 };
 
 

@@ -25,7 +25,7 @@ int main() {
         cout << "Seleccione: ";
         cin >> op; cin.ignore(); cout << endl;
         string nombre, contraseña, nick, descripcion, categoria, texto;
-        int d, m, a, stock, codP, descuento, cantidad;
+        int d, m, a, stock, codP, descuento, cantidad, id;
         char z, op1;
         float precio;
         Cat Categoria;
@@ -110,24 +110,54 @@ int main() {
                 cin.get();
                 break;
             case 7:
-                cargarDatosPrueba();
+                ctrl->listarNickClientes();
+                cout << "\nSeleccione un cliente: "; getline(cin, nick);
+                ctrl->seleccionarCliente(nick);
+                ctrl->listarProductos();
+                do {
+                    cout << "\nDesea agreagar productos a la compra? (S/N)" << endl; cin >> op1; cin.ignore();
+                    if (op1 != 'S' && op1 != 's') break;
+                    cout << "Ingrese codigo de producto: "; cin >> codP; cin.ignore();
+                    cout << "Ingrese cantidad deseada: "; cin >> cantidad; cin.ignore();
+                    ctrl->agregarProducto(codP, cantidad);
+                } while (true);
+                cout << "Confirmar compra? (S/N)" << endl; cin >> op1; cin.ignore();
+                if (op1 == 'S' || op1 == 's') ctrl->confirmarYMostrarCompra();
+                else cout << "Compra cancelada";
+                cout << "\nPresione Enter para continuar...";
                 break;
             case 8:
                 ctrl->listarNickUsuarios();
                 cout << "\nSeleccione un usuario: "; getline(cin, nick);
+                ctrl->seleccionarUsuario(nick);
                 ctrl->listarProductos();
                 cout << "\nSeleccione un producto: "; cin >> codP; cin.ignore();
-                cout << "\nRealizar comentario nuevo o responder comentario existente: "
-                        "(Nuevo: 1, Existente: 2)"; cin >> op; cin.ignore();
+                ctrl->seleccionarProducto(codP);
+                cout << "\nRealizar comentario nuevo o responder comentario existente "
+                        "(Nuevo: 1, Existente: 2): "; cin >> op; cin.ignore();
                 if (op == 1) {
                     cout << "\nIngrese texto del comentario: "; getline(cin, texto);
                     ctrl->realizarComentario(texto);
-                } else ctrl->();
-                cout << "\nPresione Enter para continuar...";
-                cin.get();
+                    cout << "\nPresione Enter para continuar...";
+                    cin.get();
+                } else if (op == 2) {
+                    ctrl->listarComentarios();
+                    cout << "\nSeleccione un comentario: "; cin >> id; cin.ignore();
+                    cout << "\nIngrese texto del comentario: "; getline(cin, texto);
+                    ctrl->responderComentario(id, texto);
+                    cout << "\nPresione Enter para continuar...";
+                    cin.get();
+                }
                 break;
             case 9:
-                cargarDatosPrueba();
+                ctrl->listarNickUsuarios();
+                cout << "\nSeleccione un usuario: "; getline(cin, nick);
+                ctrl->listarComentarios(nick);
+                cout << "AAAAAAAAAAAAA";
+                ctrl->listarComentarios();
+                cout << "\nSeleccione un comentario: "; cin >> id; cin.ignore();
+                ctrl->eliminarComentarios(id);
+                ctrl->listarComentarios();
                 break;
             case 10:
                 cargarDatosPrueba();
@@ -155,6 +185,11 @@ void cargarDatosPrueba() {
     ctrl->altaProducto("Vino", 1234, 12, "Qsy", Otros, "Thiago");
     ctrl->altaProducto("Lechuga", 1234, 12, "Qsy", Otros, "Thiago");
     ctrl->altaProducto("Tomate", 1234, 12, "Qsy", Otros, "Thiago");
+    ctrl->seleccionarUsuario("Luciano");
+    ctrl->seleccionarProducto(1);
+    ctrl->realizarComentario("xdxdxd");
+    ctrl->seleccionarUsuario("Ignacio");
+    ctrl->responderComentario(1, "pepe");
     /*ctrl->ListarProductos("Ignacio");
     ctrl->CrearPromocion("Promo1", "Descripcion", Date(27, 8, 2025), 20);
     ctrl->SeleccionarProducto(1, 10);

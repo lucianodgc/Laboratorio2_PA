@@ -3,8 +3,10 @@
 #define PRODUCTO_H
 
 #include "Interfaces.h"
-#include "Usuario.h"
+#include "Estructuras.h"
+#include <string>
 
+class Usuario;
 class Vendedor;
 
 using namespace std;
@@ -23,6 +25,10 @@ public:
     string getDescripcion() const;
     Cat getCategoria() const;
     Vendedor* getVendedor() const;
+    IDictionary* getComentarios() const;
+    void agregarComentario(int id, string texto, Date fComentario, Producto* producto, Usuario* usuario) const;
+    int generarCodigoComentario() const;
+    void eliminarComentario(int id) const;
 private:
 	int CodProd;
     int Stock;

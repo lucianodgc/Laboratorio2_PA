@@ -4,19 +4,22 @@
 
 #include "Estructuras.h"
 #include "Interfaces.h"
+#include "ProductoCompras.h"
 
 using namespace std;
 
 class Compras: public ICollectible {
 public:
-    Compras(float montoFinal);
+    Compras(float montoFinal, Date fCompra);
     ~Compras() override;
     Date getFCompra();
     float getMontoFinal() const;
+    void agregarProducto(Producto* producto, int cantidad);
+    ICollection* getProductoCompras() const;
 private:
     Date FCompra;
     float MontoFinal;
-    ICollection* ProdutoCompras;
+    ICollection* productoCompras;
 
 };
 

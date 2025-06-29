@@ -14,7 +14,6 @@ public:
 
     ~PromocionProducto() override;
     Producto* getProducto() const;
-    float getDescuento();
     int getCantidadMinima() const;
 private:
 	int CantMinima;
