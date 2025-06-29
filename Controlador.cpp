@@ -67,42 +67,33 @@ void Controlador::listarComentarios(string nick) {
 }
 
 void Controlador::realizarComentario(string texto) {
-    Date const hoy = Date::obtenerFechaActual();
-    Usuario* us = usuarioActual;
-    int id = us->generarCodigoComentario();
-    us->agregarComentario(id, texto, hoy, productoActual, usuarioActual);
-    productoActual->agregarComentario(id, texto, hoy, productoActual, usuarioActual);
+    Comentario* comen = usuarioActual->nuevoComentario(texto);
+    productoActual->agregarComentario(comen);
 }
 
 void Controlador::responderComentario(int id, string texto) {
     Date const hoy = Date::obtenerFechaActual();
-    Producto* prod = productoActual;
-    IDictionary* col = prod->getComentarios();
+    Comentario* comen = usuarioActual->nuevoComentario(texto);
+    IDictionary* col = productoActual->getComentarios();
     IKey* key = new Integer(id);
-    auto* comen = dynamic_cast<Comentario*>(col->find(key));
-    Usuario* us = usuarioActual;
-    int codComen = prod->generarCodigoComentario();
-    us->agregarComentario(codComen, texto, hoy, productoActual, usuarioActual);
-    prod->agregarComentario(codComen, texto, hoy, productoActual, usuarioActual);
-    comen->agregarRespuesta(codComen, texto, hoy, productoActual, usuarioActual);
-
+    auto* comentario = dynamic_cast<Comentario*>(col->find(key));
+    comentario->agregarRespuesta(comen);
+    productoActual->agregarComentario(comen);
 }
 
 void Controlador::eliminarComentarios(int id) {
-    Usuario* us = usuarioActual;
-    us->eliminarComentario(id);
-}
-
-int Controlador::generarCodigoProducto() {
-    int maxCod = 0;
-    for (IIterator* it = productos->getIterator(); it->hasCurrent(); it->next()) {
-        auto* prod = dynamic_cast<Producto *>(it->getCurrent());
-        if (prod != nullptr && prod->getCodProd() > maxCod) {
-            maxCod = prod->getCodProd();
+    IKey* key = new Integer(id);
+    for (IIterator* it = usuarios->getIterator();it->hasCurrent();it->next()) {
+        auto* us = dynamic_cast<Usuario*>(it->getCurrent());
+        IDictionary *col = us->getComentarios();
+        bool esta = col->member(key);
+        if (esta) {
+            auto* comen = dynamic_cast<Comentario*>(col->find(key));
+            us->eliminarComentario(comen, productos);
         }
     }
-    return maxCod + 1;
 }
+
 
 void Controlador::crearPromocion(string Nombre, string Descripcion,
 Date FVencimiento, int Descuento) {
@@ -204,13 +195,10 @@ string Descripcion, Cat Categoria, string NicknameVendedor) {
         return;
     }
 
-    int codigo = generarCodigoProducto();
-    auto* p = new Producto(codigo, Nombre, Precio, Stock, Descripcion, Categoria, vendedor);
-
-    key = new Integer(codigo);
-    productos->add(key, p);
-
-    vendedor->agregarProducto(p);
+    auto* prod = new Producto(Nombre, Precio, Stock, Descripcion, Categoria, vendedor);
+    key = new Integer(prod->getCodProd());
+    productos->add(key, prod);
+    vendedor->agregarProducto(prod);
 
     cout << "Producto agregado correctamente" << endl;
 }

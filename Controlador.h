@@ -41,7 +41,6 @@ public:
     void realizarComentario(string Texto) override;
     void responderComentario(int ID, string Texto) override;
     void listarComentarios() override;
-    int generarCodigoProducto() override;
     bool productoEnPromocionVigente(Producto* &producto) const ;
     void seleccionarProducto(int codProd, int cantidad) override;
     void seleccionarProducto(int codProd) override;

@@ -6,6 +6,7 @@
 #include "Estructuras.h"
 #include <string>
 
+class Comentario;
 class Usuario;
 class Vendedor;
 
@@ -15,7 +16,7 @@ using namespace std;
 
 class Producto: public ICollectible {
 public:
-    Producto(int CodProd, string const &Nombre, float Precio, int stock,
+    Producto(string const &Nombre, float Precio, int stock,
     string const &Descripcion, Cat Categoria, Vendedor* vendedor);
     ~Producto() override;
     int getCodProd() const;
@@ -26,10 +27,10 @@ public:
     Cat getCategoria() const;
     Vendedor* getVendedor() const;
     IDictionary* getComentarios() const;
-    void agregarComentario(int id, string texto, Date fComentario, Producto* producto, Usuario* usuario) const;
-    int generarCodigoComentario() const;
-    void eliminarComentario(int id) const;
+    void agregarComentario(Comentario* comen) const;
+    void eliminarComentario(Comentario* comen) const;
 private:
+    static int ultimoCodProd;
 	int CodProd;
     int Stock;
     float Precio;

@@ -1,9 +1,12 @@
 
 #include "Producto.h"
 #include "Usuario.h"
+#include "Comentario.h"
 
-Producto::Producto(int CodProd, string const &Nombre, float Precio, int stock, string const &Descripcion,
-Cat Categoria, Vendedor* vendedor) : CodProd(CodProd), Stock(stock), Precio(Precio), Nombre(Nombre),
+int Producto::ultimoCodProd = 0;
+
+Producto::Producto(string const &Nombre, float Precio, int stock, string const &Descripcion,
+Cat Categoria, Vendedor* vendedor) : CodProd(++ultimoCodProd), Stock(stock), Precio(Precio), Nombre(Nombre),
 Descripcion(Descripcion), Categoria(Categoria), vendedor(vendedor) {Comentarios = new OrderedDictionary();}
 
 Producto::~Producto() = default;
@@ -24,29 +27,14 @@ Vendedor* Producto::getVendedor() const {return vendedor;}
 
 IDictionary* Producto::getComentarios() const {return Comentarios;}
 
-void Producto::agregarComentario(int id, string texto, Date fComentario, Producto* producto, Usuario* usuario) const {
-    auto* comen = new Comentario(id, texto, fComentario, producto, usuario);
-    IKey* key = new Integer(id);
+void Producto::agregarComentario(Comentario* comen) const {
+    int idComen= comen->getID();
+    IKey* key = new Integer(idComen);
     Comentarios->add(key , comen);
-    delete key;
 }
 
-int Producto::generarCodigoComentario() const {
-    int maxID = 0;
-    for (IIterator* it = Comentarios->getIterator(); it->hasCurrent(); it->next()) {
-        auto* comen = dynamic_cast<Comentario *>(it->getCurrent());
-        if (comen != nullptr && comen->getID() > maxID) {
-            maxID = comen->getID();
-        }
-    }
-    return maxID + 1;
-}
-
-void Producto::eliminarComentario(int id) const {
-    IKey* key = new Integer(id);
-    if (!Comentarios->member(key)) {
-        return;
-    }
+void Producto::eliminarComentario(Comentario* comen) const {
+    IKey* key = new Integer(comen->getID());
     Comentarios->remove(key);
     delete key;
 }

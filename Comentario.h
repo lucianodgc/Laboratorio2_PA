@@ -13,7 +13,7 @@ using namespace std;
 
 class Comentario: public ICollectible {
 public:
-    Comentario(int id, string texto, Date fComentario, Producto* prod, Usuario* usuario);
+    Comentario(string texto, Date fComentario);
     ~Comentario() override;
     int getID() const;
     string getTexto();
@@ -21,15 +21,14 @@ public:
     Producto* getProducto() const;
     Usuario* getUsuario() const;
    IDictionary* getRespuestas() const;
-    void agregarRespuesta(int id, string texto, Date fComentario, Producto* prod, Usuario* usuario) const;
+    void agregarRespuesta(Comentario* comen) const;
     void eliminarRespuesta(int id) const;
 private:
+    static int ultimoID;
 	int ID;
     string Texto;
     Date FComentario;
     IDictionary* Respuestas;
-    Producto* producto;
-    Usuario* usuario;
 };
 
 

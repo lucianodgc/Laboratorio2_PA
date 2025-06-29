@@ -32,7 +32,6 @@ public:
     virtual void listarVendedores() = 0;
     virtual void listarNickUsuarios() = 0;
     virtual void listarComentarios() = 0;
-    virtual int generarCodigoProducto() = 0;
     virtual void listarComentarios(string nick) = 0;
     virtual void eliminarComentarios(int id) = 0;
     virtual void listarNickClientes() = 0;

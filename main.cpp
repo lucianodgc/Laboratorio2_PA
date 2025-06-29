@@ -163,7 +163,9 @@ int main() {
                 cargarDatosPrueba();
                 break;
             case 11:
-                cargarDatosPrueba();
+                ctrl->listarComentarios("Luciano"); cout << endl << endl;
+                ctrl->listarComentarios("Ignacio"); cout << endl << endl;
+                ctrl->listarComentarios();
                 break;
             default:
                 cout << "Opcion no valida.\n";

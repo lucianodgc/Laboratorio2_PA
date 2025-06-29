@@ -10,33 +10,51 @@ string Usuario::getNickname() {return Nickname;}
 
 Date Usuario::getNacimiento() {return Fnacimiento;}
 
-void Usuario::agregarComentario(int id, string texto, Date fComentario, Producto* producto, Usuario* usuario) const {
-    auto* comen = new Comentario(id, texto, fComentario, producto, usuario);
-    int codID = generarCodigoComentario();
-    IKey* ik = new Integer(codID);
+Comentario* Usuario::nuevoComentario(string texto) const {
+    Date const hoy = Date::obtenerFechaActual();
+    auto* comen = new Comentario(texto, hoy);
+    IKey* ik = new Integer(comen->getID());
     Comentarios->add(ik , comen);
-}
-
-int Usuario::generarCodigoComentario() const {
-    int maxID = 0;
-    for (IIterator* it = Comentarios->getIterator(); it->hasCurrent(); it->next()) {
-        auto* comen = dynamic_cast<Comentario *>(it->getCurrent());
-        if (comen != nullptr && comen->getID() > maxID) {
-            maxID = comen->getID();
-        }
-    }
-    return maxID + 1;
+    return comen;
 }
 
 IDictionary* Usuario::getComentarios() const {return Comentarios;}
 
-void Usuario::eliminarComentario(int id) const {
-    IKey* key = new Integer(id);
-    if (!Comentarios->member(key)) {
-        return;
+void Usuario::eliminarComentario(Comentario* comen, IDictionary*& productos) const {
+    IDictionary* col = comen->getRespuestas();
+
+    while (true) {
+        if (col == nullptr) break;
+
+        IIterator* it = col->getIterator();
+        if (!it->hasCurrent()) {
+            delete it;
+            break;
+        }
+
+        Comentario* hijo = dynamic_cast<Comentario*>(it->getCurrent());
+        delete it;
+
+        eliminarComentario(hijo, productos);
+
+        IKey* keyHijo = new Integer(hijo->getID());
+        col->remove(keyHijo);
+        delete keyHijo;
     }
-    auto* comen = dynamic_cast<Comentario*>(Comentarios->find(key));
-    Producto* prod = comen->getProducto();
-    prod->eliminarComentario(id);
-    comen->eliminarRespuesta(id);
+
+    IKey* key = new Integer(comen->getID());
+    Comentarios->remove(key);
+
+    for (IIterator* it = productos->getIterator(); it->hasCurrent(); it->next()) {
+        Producto* prod = dynamic_cast<Producto*>(it->getCurrent());
+        if (prod == nullptr) continue;
+
+        IDictionary* comentarios = prod->getComentarios();
+        if (comentarios != nullptr && comentarios->member(key)) {
+            Comentario* comentarioAEliminar = dynamic_cast<Comentario*>(comentarios->find(key));
+            prod->eliminarComentario(comentarioAEliminar);
+        }
+    }
+
+    delete key;
 }
