@@ -31,13 +31,14 @@ ProductoCompras* Producto::getProdComp() const {return prodComp;}
 
 void Producto::agregarProdCompra(ProductoCompras* prodComp) {this->prodComp = prodComp;}
 
-void Producto::agregarComentario(Comentario* comen) const {
+void Producto::agregarComentario(Comentario* &comen) const {
     int idComen= comen->getID();
     IKey* key = new Integer(idComen);
     Comentarios->add(key , comen);
+    delete key;
 }
 
-void Producto::eliminarComentario(Comentario* comen) const {
+void Producto::eliminarComentario(Comentario* const &comen) const {
     IKey* key = new Integer(comen->getID());
     Comentarios->remove(key);
     delete key;

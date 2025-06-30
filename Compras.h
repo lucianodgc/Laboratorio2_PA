@@ -10,13 +10,14 @@ using namespace std;
 
 class Compras: public ICollectible {
 public:
-    Compras(float montoFinal, Date fCompra);
+    Compras(float montoFinal, Date const &fCompra);
     ~Compras() override;
     Date getFCompra();
     float getMontoFinal() const;
-    void agregarProducto(Producto* producto, int cantidad);
     ICollection* getProductoCompras() const;
+    void agregarProducto(Producto* producto, int cantidad) const;
     void finalizarCompra(const Date& fecha, float montoFinal);
+
 private:
     Date FCompra;
     float MontoFinal;

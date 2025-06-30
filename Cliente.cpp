@@ -13,7 +13,7 @@ string Cliente::getCiudad() {return Ciudad;}
 
 ICollection* Cliente::getCompras() const {return compras;}
 
-Compras* Cliente::crearCompra() const {
+Compras* Cliente::crearCompra() {
     auto* comp = new Compras(0, Date());
     return comp;
 }
@@ -22,13 +22,15 @@ void Cliente::agregarCompra(Compras *comp) const {
     Date const hoy = Date::obtenerFechaActual();
     ICollection* col = comp->getProductoCompras();
     Producto* prod = nullptr;
+    IIterator* it;
     float montoFinal = 0;
-    for (IIterator* it = col->getIterator(); it->hasCurrent(); it->next()) {
+    for (it = col->getIterator(); it->hasCurrent(); it->next()) {
         auto* pp = dynamic_cast<ProductoCompras*>(it->getCurrent());
         prod = pp->getProducto();
         montoFinal += prod->getPrecio() * pp->getCantidad();
     }
     comp->finalizarCompra(hoy, montoFinal);
     compras->add(comp);
+    delete it;
     cout << "Compra concretada correctamente" << endl;
 }

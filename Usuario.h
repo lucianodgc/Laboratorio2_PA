@@ -16,9 +16,11 @@ public:
     Usuario(string const &Nickname, string const &Contraseña, Date const &Fnacimiento);
     string getNickname();
     Date getNacimiento();
-    Comentario* nuevoComentario(string texto) const;
     IDictionary* getComentarios() const;
-    void eliminarComentario(Comentario* comen, IDictionary* &productos) const;
+    void eliminarComentario(Comentario* const &comen, IDictionary* &productos);
+    Comentario* nuevoComentario(string const &texto) const;
+
+
 protected:
     string Nickname;
     string Contraseña;

@@ -12,15 +12,16 @@ using namespace std;
 
 class Promocion: public ICollectible {
 public:
-    Promocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento);
-    virtual ~Promocion();
-    void agregarProducto(Producto* Producto, int cantidadMinima);
+    Promocion(string const &Nombre, string const &Descripcion, Date const &FVencimiento, int Descuento);
+    ~Promocion() override;
     string getNombre();
     string getDescripcion();
     Date getFVencimiento();
-    int getDescuento();
-    ICollection* getPromocionProducto();
-    bool productoYaAgregado(Producto* p);
+    int getDescuento() const;
+    ICollection* getPromocionProducto() const;
+    void agregarProducto(Producto* Producto, int cantidadMinima) const;
+    bool productoYaAgregado(Producto* const &prod) const;
+
 private:
 	string Nombre;
     string Descripcion;

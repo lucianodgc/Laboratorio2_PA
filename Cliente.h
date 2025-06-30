@@ -17,9 +17,11 @@ public:
     ~Cliente() override;
     DataDirec getDireccion();
     string getCiudad();
-    Compras* crearCompra() const;
-    void agregarCompra(Compras *comp) const;
     ICollection* getCompras() const;
+    static Compras* crearCompra() ;
+    void agregarCompra(Compras *comp) const;
+
+
 private:
 	DataDirec Direccion;
     string Ciudad;

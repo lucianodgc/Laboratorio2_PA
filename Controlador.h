@@ -7,7 +7,6 @@
 #include "Producto.h"
 #include "Promocion.h"
 #include "Cliente.h"
-#include "PromocionProducto.h"
 #include "Vendedor.h"
 
 using namespace std;
@@ -24,7 +23,7 @@ public:
     Date FNacimiento, string RUT) override;
     void listarUsuarios() override;
     void listarNickVendedores() override;
-    void listarProductosPendiente(string NicknameVendedor);
+    void listarProductosPendiente(string NicknameVendedor) override;
     void crearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
     void listarPromosVigentes() override;
     void verInfoPromo(string nombre) override;

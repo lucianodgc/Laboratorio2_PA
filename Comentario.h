@@ -5,7 +5,6 @@
 #include "Estructuras.h"
 #include "Interfaces.h"
 #include "Producto.h"
-#include "Usuario.h"
 
 using namespace std;
 
@@ -13,7 +12,7 @@ using namespace std;
 
 class Comentario: public ICollectible {
 public:
-    Comentario(string texto, Date fComentario);
+    Comentario(string const &texto, Date const &fComentario);
     ~Comentario() override;
     int getID() const;
     string getTexto();
@@ -21,7 +20,7 @@ public:
     Producto* getProducto() const;
     Usuario* getUsuario() const;
    IDictionary* getRespuestas() const;
-    void agregarRespuesta(Comentario* comen) const;
+    void agregarRespuesta(Comentario* &comen) const;
 
 private:
     static int ultimoID;

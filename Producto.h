@@ -29,9 +29,10 @@ public:
     Vendedor* getVendedor() const;
     IDictionary* getComentarios() const;
     ProductoCompras* getProdComp() const;
-    void agregarComentario(Comentario* comen) const;
-    void eliminarComentario(Comentario* comen) const;
+    void agregarComentario(Comentario* &comen) const;
+    void eliminarComentario(Comentario* const &comen) const;
     void agregarProdCompra(ProductoCompras* prodComp);
+
 private:
     static int ultimoCodProd;
 	int CodProd;

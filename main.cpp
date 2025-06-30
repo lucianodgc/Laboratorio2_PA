@@ -153,8 +153,12 @@ int main() {
                 ctrl->listarNickUsuarios();
                 cout << "\nSeleccione un usuario: "; getline(cin, nick);
                 ctrl->listarComentarios(nick);
+                cout << "TODOS LOS COMENTARIOS" << endl;
+                ctrl->listarComentarios();
                 cout << "\nSeleccione un comentario: "; cin >> id; cin.ignore();
                 ctrl->eliminarComentarios(id);
+            cout << "TODOS LOS COMENTARIOS" << endl;
+                ctrl->listarComentarios();
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
@@ -235,13 +239,20 @@ void cargarDatosPrueba() {
     //REALIZAR COMENTARIO
     ctrl->seleccionarUsuario("Luciano");
     ctrl->seleccionarProducto(1);
-    ctrl->realizarComentario("xdxdxd");
+    ctrl->realizarComentario("comenPadre");
+    ctrl->seleccionarUsuario("Ignacio");
+    ctrl->seleccionarProducto(1);
+    ctrl->realizarComentario("comenPadre2");
     //RESPONDER COMENTARIO
     ctrl->seleccionarUsuario("Ignacio");
-    ctrl->responderComentario(1, "pepe");
+    ctrl->responderComentario(1, "ComenHijo1");
 
     ctrl->seleccionarUsuario("Luciano");
-    ctrl->responderComentario(2, "papa");
+    ctrl->responderComentario(1, "comenHijo1.1");
+    ctrl->seleccionarUsuario("Pepe");
+    ctrl->responderComentario(2, "comenHijo2");
+    ctrl->seleccionarUsuario("Luciano");
+    ctrl->responderComentario(3, "comenHijo3");
 
     cout << "\n[OK] Datos de prueba cargados.\n";
 }

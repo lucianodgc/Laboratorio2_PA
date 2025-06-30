@@ -29,7 +29,9 @@ bool Date::fechaEsMayorIgual(const Date& otraFecha) const {
 
 
 DataDirec::DataDirec(string const &nomCalle, int nroPuerta) : NomCalle(nomCalle), NroPuerta(nroPuerta) {}
-DataDirec::DataDirec() {}
+DataDirec::DataDirec() {
+}
+
 DataDirec::~DataDirec() = default;
 string DataDirec::toString() const {return "Nombre Calle: " + NomCalle + ", NroPuerta: " + to_string(NroPuerta);}
 string DataDirec::getNomCalle() const {return NomCalle;}

@@ -13,14 +13,14 @@ Vendedor::~Vendedor() = default;
 
 string Vendedor::getRUT() {return RUT;}
 
+IDictionary* Vendedor::getProductos() const {return Productos;}
+
+IDictionary* Vendedor::getPromociones() const {return Promociones;}
+
 void Vendedor::agregarProducto(Producto* p) const {
     IKey* key = new Integer(p->getCodProd());
     Productos->add(key, p);
 }
-
-IDictionary* Vendedor::getProductos() const {return Productos;}
-
-IDictionary* Vendedor::getPromociones() const {return Promociones;}
 
 void Vendedor::agregarPromocion(Promocion* promo) const {
     IKey* key = new String(promo->getNombre().c_str());
