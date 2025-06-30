@@ -23,14 +23,3 @@ void Comentario::agregarRespuesta(Comentario* comen) const {
     IKey* ik = new Integer(comen->getID());
     Respuestas->add(ik , comentario);
 }
-
-void Comentario::eliminarRespuesta(int id) const {
-    IKey* key;
-    for (IIterator* it = Respuestas->getIterator(); it->hasCurrent(); it->next()) {
-        key = new Integer(id);
-        auto* resp = dynamic_cast<Comentario*>(Respuestas->find(key));
-        int id2 = resp->getID();
-        resp->eliminarRespuesta(id2);
-
-    }
-}

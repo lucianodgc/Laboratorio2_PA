@@ -153,10 +153,8 @@ int main() {
                 ctrl->listarNickUsuarios();
                 cout << "\nSeleccione un usuario: "; getline(cin, nick);
                 ctrl->listarComentarios(nick);
-                ctrl->listarComentarios();
                 cout << "\nSeleccione un comentario: "; cin >> id; cin.ignore();
                 ctrl->eliminarComentarios(id);
-                ctrl->listarComentarios();
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
@@ -195,44 +193,55 @@ int main() {
 
 void cargarDatosPrueba() {
     auto ctrl = Fabrica::getControlador();
+    //ALTA CLIENTE
     ctrl->altaCliente("Luciano", "clave123", Date(10,6,2000), DataDirec("Calle Falsa", 1234), "Maldonado");
     ctrl->altaCliente("Pepe", "clave123", Date(11,6,2010), DataDirec("Calle Falsa1", 1234), "Montevideo");
+    //ALTA VENDEDOR
     ctrl->altaVendedor("Ignacio", "clave456", Date(5,5,1995),"123456789102");
     ctrl->altaVendedor("Thiago", "clave456", Date(5,5,1995),"123456789101");
+    //ALTA PRODUCTO
     ctrl->altaProducto("Pan", 32, 20, "Qsy", Otros, "Ignacio");
     ctrl->altaProducto("Queso", 12, 50, "Qsy", Otros, "Ignacio");
     ctrl->altaProducto("Papas", 34, 30, "Qsy", Otros, "Ignacio");
     ctrl->altaProducto("Vino", 124, 45, "Qsy", Otros, "Thiago");
     ctrl->altaProducto("Lechuga", 24, 70, "Qsy", Otros, "Thiago");
     ctrl->altaProducto("Tomate", 14, 40, "Qsy", Otros, "Thiago");
+    //CREAR PROMOCION
     ctrl->listarProductos("Ignacio");
     ctrl->crearPromocion("Oferton", "descripcion", Date(1, 11, 2026), 30);
     ctrl->seleccionarProducto(1, 20);
     ctrl->seleccionarProducto(3, 4);
     ctrl->seleccionarProducto(5, 2);
-    ctrl->seleccionarUsuario("Luciano");
-    ctrl->seleccionarProducto(1);
-    ctrl->realizarComentario("xdxdxd");
-    ctrl->seleccionarUsuario("Ignacio");
-    ctrl->responderComentario(1, "pepe");
-    ctrl->seleccionarUsuario("Luciano");
-    ctrl->responderComentario(2, "papa");
+    //REALIZAR COMPRA
     ctrl->crearCompra("Luciano");
     ctrl->agregarProducto(1, 3);
     ctrl->agregarProducto(2, 1);
     ctrl->confirmarYMostrarCompra();
+
     ctrl->crearCompra("Pepe");
     ctrl->agregarProducto(1, 3);
     ctrl->agregarProducto(2, 1);
     ctrl->confirmarYMostrarCompra();
+
     ctrl->crearCompra("Luciano");
     ctrl->agregarProducto(4, 2);
     ctrl->agregarProducto(5, 7);
     ctrl->confirmarYMostrarCompra();
+
     ctrl->crearCompra("Pepe");
     ctrl->agregarProducto(4, 2);
     ctrl->agregarProducto(3, 5);
     ctrl->confirmarYMostrarCompra();
+    //REALIZAR COMENTARIO
+    ctrl->seleccionarUsuario("Luciano");
+    ctrl->seleccionarProducto(1);
+    ctrl->realizarComentario("xdxdxd");
+    //RESPONDER COMENTARIO
+    ctrl->seleccionarUsuario("Ignacio");
+    ctrl->responderComentario(1, "pepe");
+
+    ctrl->seleccionarUsuario("Luciano");
+    ctrl->responderComentario(2, "papa");
 
     cout << "\n[OK] Datos de prueba cargados.\n";
 }

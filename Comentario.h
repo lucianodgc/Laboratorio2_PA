@@ -22,7 +22,7 @@ public:
     Usuario* getUsuario() const;
    IDictionary* getRespuestas() const;
     void agregarRespuesta(Comentario* comen) const;
-    void eliminarRespuesta(int id) const;
+
 private:
     static int ultimoID;
 	int ID;
