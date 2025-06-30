@@ -25,9 +25,9 @@ public:
 private:
     static int ultimoID;
 	int ID;
-    string Texto;
-    Date FComentario;
-    IDictionary* Respuestas;
+    string texto;
+    Date fComentario;
+    IDictionary* respuestas;
 };
 
 

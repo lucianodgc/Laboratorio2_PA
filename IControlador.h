@@ -10,24 +10,24 @@ using namespace std;
 class IControlador {
 public:
     virtual ~IControlador() = default;
-    virtual void realizarComentario(string Texto) = 0;
-    virtual void responderComentario(int ID, string Texto) = 0;
-    virtual void altaProducto(string Nombre, float Precio, int Stock,
-    string Descripcion, Cat Categoria, string NicknameVendedor) = 0;
+    virtual void realizarComentario(string texto) = 0;
+    virtual void responderComentario(int id, string texto) = 0;
+    virtual void altaProducto(string nombre, float precio, int stock,
+    string descripcion, Cat categoria, string nicknameVendedor) = 0;
     virtual void listarProductos() = 0;
-    virtual void listarProductos(string NicknameVendedor) = 0;
+    virtual void listarProductos(string nicknameVendedor) = 0;
     virtual void mostrarDatosProducto(int CodProd) = 0;
-    virtual void crearPromocion(string Nombre, string Descripcion,
-    Date FVencimiento, int Descuento) = 0;
+    virtual void crearPromocion(string nombre, string descripcion,
+    Date fVencimiento, int descuento) = 0;
     virtual void seleccionarProducto(int codProd, int cantidad) = 0;
     virtual void seleccionarProducto(int codProd) = 0;
     virtual void seleccionarUsuario(string nombre) = 0;
     virtual void listarPromosVigentes() = 0;
     virtual void verInfoPromo(string nombre) = 0;
-    virtual void altaCliente(string Nombre, string Contraseña,
-    Date FNacimiento, DataDirec Direccion, string Ciudad) = 0;
-    virtual void altaVendedor(string Nombre, string Contraseña,
-    Date FNacimiento, string RUT) = 0;
+    virtual void altaCliente(string nombre, string contraseña,
+    Date fNacimiento, DataDirec direccion, string ciudad) = 0;
+    virtual void altaVendedor(string nombre, string contraseña,
+    Date fNacimiento, string RUT) = 0;
     virtual void listarUsuarios() = 0;
     virtual void listarNickVendedores() = 0;
     virtual void listarNickUsuarios() = 0;
@@ -39,7 +39,7 @@ public:
     virtual void confirmarYMostrarCompra() = 0;
     virtual void crearCompra(string nick) = 0;
     virtual void mostrarDatosUsuario(string nick) = 0;
-    virtual void listarProductosPendiente(string NicknameVendedor) = 0;
+    virtual void listarProductosPendiente(string nicknameVendedor) = 0;
     virtual void listarCompras(int codProd) = 0;
     virtual void marcarProducto(string nickCliente, Date fechaCompra) = 0;
 };

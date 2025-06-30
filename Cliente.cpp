@@ -1,15 +1,15 @@
 
 #include "Cliente.h"
 
-Cliente::Cliente(string const &Nickname, string const &Contraseña, Date const &Fnacimiento,
-DataDirec const &Direccion, string const &Ciudad) : Usuario(Nickname, Contraseña, Fnacimiento),
-Direccion(Direccion), Ciudad(Ciudad), compras(new List()) {}
+Cliente::Cliente(string const &nickname, string const &contraseña, Date const &fNacimiento,
+DataDirec const &direccion, string const &ciudad) : Usuario(nickname, contraseña, fNacimiento),
+direccion(direccion), ciudad(ciudad), compras(new List()) {}
 
 Cliente::~Cliente() = default;
 
-DataDirec Cliente::getDireccion() {return Direccion;}
+DataDirec Cliente::getDireccion() {return direccion;}
 
-string Cliente::getCiudad() {return Ciudad;}
+string Cliente::getCiudad() {return ciudad;}
 
 ICollection* Cliente::getCompras() const {return compras;}
 

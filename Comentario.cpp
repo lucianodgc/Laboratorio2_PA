@@ -4,20 +4,19 @@
 int Comentario::ultimoID = 0;
 
 Comentario::Comentario(string const &texto, Date const &fComentario)
-    : ID(++ultimoID), Texto(texto), FComentario(fComentario) { Respuestas = new OrderedDictionary; }
+    : ID(++ultimoID), texto(texto), fComentario(fComentario) { respuestas = new OrderedDictionary; }
 
 Comentario::~Comentario() = default;
 
 int Comentario::getID() const {return ID;}
 
-string Comentario::getTexto(){return Texto;}
+string Comentario::getTexto(){return texto;}
 
-Date Comentario::getFComentario(){return FComentario;}
+Date Comentario::getFComentario(){return fComentario;}
 
-IDictionary* Comentario::getRespuestas() const {return Respuestas;}
+IDictionary* Comentario::getRespuestas() const {return respuestas;}
 
 void Comentario::agregarRespuesta(Comentario* &comen) const {
     IKey* key = new Integer(comen->getID());
-    Respuestas->add(key , comen);
-    delete key;
+    respuestas->add(key , comen);
 }

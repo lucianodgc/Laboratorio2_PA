@@ -12,8 +12,8 @@ using namespace std;
 
 class Cliente:public Usuario {
 public:
-    Cliente(string const &Nickname, string const &Contraseña, Date const &Fnacimiento,
-    DataDirec const &Direccion, string const &Ciudad);
+    Cliente(string const &nickname, string const &contraseña, Date const &fNacimiento,
+    DataDirec const &direccion, string const &ciudad);
     ~Cliente() override;
     DataDirec getDireccion();
     string getCiudad();
@@ -23,8 +23,8 @@ public:
 
 
 private:
-	DataDirec Direccion;
-    string Ciudad;
+	DataDirec direccion;
+    string ciudad;
     ICollection* compras;
 };
 

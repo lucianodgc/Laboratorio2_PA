@@ -17,42 +17,39 @@ class Controlador:public IControlador {
 public:
     Controlador();
     ~Controlador() override;
-    void altaCliente(string Nombre, string Contraseña,Date FNacimiento,
-    DataDirec Direccion, string Ciudad) override;
-    void altaVendedor(string Nombre, string Contraseña,
-    Date FNacimiento, string RUT) override;
-    void listarUsuarios() override;
-    void listarNickVendedores() override;
-    void listarProductosPendiente(string NicknameVendedor) override;
-    void crearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
-    void listarPromosVigentes() override;
-    void verInfoPromo(string nombre) override;
-
-    void altaProducto(string Nombre, float Precio, int Stock,
-    string Descripcion, Cat Categoria, string NicknameVendedor) override;
-
-    void listarProductos() override;
-    void listarProductos(string NicknameVendedor) override;
-    void mostrarDatosProducto(int CodProd) override;
-    void listarNickUsuarios() override;
-    void listarCompras(int codProd) override;
-
-    void realizarComentario(string Texto) override;
-    void responderComentario(int ID, string Texto) override;
+    void agregarProducto(int codProd, int cantidad) override;
+    void altaCliente(string nombre, string contraseña,Date fNacimiento,
+    DataDirec direccion, string ciudad) override;
+    void altaVendedor(string nombre, string contraseña,
+    Date fNacimiento, string rut) override;
+    void altaProducto(string nombre, float precio, int stock,
+    string descripcion, Cat categoria, string nicknameVendedor) override;
+    void confirmarYMostrarCompra() override;
+    void crearCompra(string nick) override;
+    void crearPromocion(string nombre, string descripcion, Date fVencimiento, int descuento) override;
+    void eliminarComentarios(int id) override;
     void listarComentarios() override;
+    void listarComentarios(string nick) override;
+    void listarCompras(int codProd) override;
+    void listarNickUsuarios() override;
+    void listarNickClientes() override;
+    void listarNickVendedores() override;
+    void listarProductos() override;
+    void listarProductos(string nicknameVendedor) override;
+    void listarProductosPendiente(string nicknameVendedor) override;
+    void listarPromosVigentes() override;
+    void listarUsuarios() override;
+    void marcarProducto(string nicknameCliente, Date fechaCompra) override;
+    void mostrarDatosProducto(int codProd) override;
+    void mostrarDatosUsuario(string nick) override;
     bool productoEnPromocionVigente(Producto* &producto) const ;
+    bool productoYaAgregado(Producto* p);
+    void realizarComentario(string texto) override;
+    void responderComentario(int id, string texto) override;
     void seleccionarProducto(int codProd, int cantidad) override;
     void seleccionarProducto(int codProd) override;
     void seleccionarUsuario(string nombre) override;
-    bool productoYaAgregado(Producto* p);
-    void listarComentarios(string nick) override;
-    void eliminarComentarios(int id) override;
-    void listarNickClientes() override;
-    void agregarProducto(int codProd, int cantidad) override;
-    void confirmarYMostrarCompra() override;
-    void mostrarDatosUsuario(string nick) override;
-    void crearCompra(string nick) override;
-    void marcarProducto(string nickCliente, Date fechaCompra) override;
+    void verInfoPromo(string nombre) override;
 
 private:
     IDictionary* usuarios;

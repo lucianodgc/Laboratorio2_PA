@@ -18,8 +18,8 @@ int main() {
         cout << "6. Consultar promoción\n";
         cout << "7. Realizar compra\n";
         cout << "8. Dejar comentario\n";
-        cout << "9. Eliminar comentario\n (terminar)";
-        cout << "10. Enviar producto\n (terminar)";
+        cout << "9. Eliminar comentario\n";
+        cout << "10. Enviar producto\n";
         cout << "11. Expediente de Usuario\n";
         cout << "12. Cargar datos de prueba\n";
         cout << "0. Salir\n";
@@ -149,16 +149,12 @@ int main() {
                     cin.get();
                 }
                 break;
-            case 9://"FALTA HACER"
+            case 9:
                 ctrl->listarNickUsuarios();
                 cout << "\nSeleccione un usuario: "; getline(cin, nick);
                 ctrl->listarComentarios(nick);
-                cout << "TODOS LOS COMENTARIOS" << endl;
-                ctrl->listarComentarios();
                 cout << "\nSeleccione un comentario: "; cin >> id; cin.ignore();
                 ctrl->eliminarComentarios(id);
-            cout << "TODOS LOS COMENTARIOS" << endl;
-                ctrl->listarComentarios();
                 cout << "\nPresione Enter para continuar...";
                 cin.get();
                 break;
@@ -196,63 +192,86 @@ int main() {
 }
 
 void cargarDatosPrueba() {
-    auto ctrl = Fabrica::getControlador();
-    //ALTA CLIENTE
-    ctrl->altaCliente("Luciano", "clave123", Date(10,6,2000), DataDirec("Calle Falsa", 1234), "Maldonado");
-    ctrl->altaCliente("Pepe", "clave123", Date(11,6,2010), DataDirec("Calle Falsa1", 1234), "Montevideo");
-    //ALTA VENDEDOR
-    ctrl->altaVendedor("Ignacio", "clave456", Date(5,5,1995),"123456789102");
-    ctrl->altaVendedor("Thiago", "clave456", Date(5,5,1995),"123456789101");
-    //ALTA PRODUCTO
-    ctrl->altaProducto("Pan", 32, 20, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Queso", 12, 50, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Papas", 34, 30, "Qsy", Otros, "Ignacio");
-    ctrl->altaProducto("Vino", 124, 45, "Qsy", Otros, "Thiago");
-    ctrl->altaProducto("Lechuga", 24, 70, "Qsy", Otros, "Thiago");
-    ctrl->altaProducto("Tomate", 14, 40, "Qsy", Otros, "Thiago");
-    //CREAR PROMOCION
-    ctrl->listarProductos("Ignacio");
-    ctrl->crearPromocion("Oferton", "descripcion", Date(1, 11, 2026), 30);
-    ctrl->seleccionarProducto(1, 20);
-    ctrl->seleccionarProducto(3, 4);
-    ctrl->seleccionarProducto(5, 2);
-    //REALIZAR COMPRA
-    ctrl->crearCompra("Luciano");
-    ctrl->agregarProducto(1, 3);
-    ctrl->agregarProducto(2, 1);
-    ctrl->confirmarYMostrarCompra();
+   auto ctrl = Fabrica::getControlador();
 
-    ctrl->crearCompra("Pepe");
-    ctrl->agregarProducto(1, 3);
-    ctrl->agregarProducto(2, 1);
-    ctrl->confirmarYMostrarCompra();
+// Alta de clientes
+ctrl->altaCliente("Luciano", "clave123", Date(10,6,2000), DataDirec("Calle Falsa", 1234), "Maldonado");
+ctrl->altaCliente("Pepe", "clave456", Date(11,6,2010), DataDirec("Calle Verdadera", 5678), "Montevideo");
 
-    ctrl->crearCompra("Luciano");
-    ctrl->agregarProducto(4, 2);
-    ctrl->agregarProducto(5, 7);
-    ctrl->confirmarYMostrarCompra();
+// Alta de vendedores
+ctrl->altaVendedor("Ignacio", "clave789", Date(5,5,1995), "123456789102");
+ctrl->altaVendedor("Thiago", "clave321", Date(15,8,1988), "123456789101");
 
-    ctrl->crearCompra("Pepe");
-    ctrl->agregarProducto(4, 2);
-    ctrl->agregarProducto(3, 5);
-    ctrl->confirmarYMostrarCompra();
-    //REALIZAR COMENTARIO
-    ctrl->seleccionarUsuario("Luciano");
-    ctrl->seleccionarProducto(1);
-    ctrl->realizarComentario("comenPadre");
-    ctrl->seleccionarUsuario("Ignacio");
-    ctrl->seleccionarProducto(1);
-    ctrl->realizarComentario("comenPadre2");
-    //RESPONDER COMENTARIO
-    ctrl->seleccionarUsuario("Ignacio");
-    ctrl->responderComentario(1, "ComenHijo1");
+// Alta de productos (diversas categorías)
+ctrl->altaProducto("Camisa", 50, 700, "Camisa de algodón", Ropa, "Ignacio");
+ctrl->altaProducto("Heladera", 10, 15000, "Heladera con freezer", Electrodomesticos, "Ignacio");
+ctrl->altaProducto("Cepillo", 100, 90, "Cepillo de dientes", Otros, "Ignacio");
 
-    ctrl->seleccionarUsuario("Luciano");
-    ctrl->responderComentario(1, "comenHijo1.1");
-    ctrl->seleccionarUsuario("Pepe");
-    ctrl->responderComentario(2, "comenHijo2");
-    ctrl->seleccionarUsuario("Luciano");
-    ctrl->responderComentario(3, "comenHijo3");
+ctrl->altaProducto("Jeans", 80, 1200, "Jeans azul", Ropa, "Thiago");
+ctrl->altaProducto("Microondas", 15, 8500, "Microondas digital", Electrodomesticos, "Thiago");
+ctrl->altaProducto("Manzana", 200, 30, "Manzana roja", Otros, "Thiago");
 
-    cout << "\n[OK] Datos de prueba cargados.\n";
+// Crear promociones
+ctrl->listarProductos("Ignacio");
+ctrl->crearPromocion("Promo Ign1", "Ropa + Cepillo", Date(1, 11, 2026), 20);
+ctrl->seleccionarProducto(1, 2);  // Camisa
+ctrl->seleccionarProducto(3, 3);  // Cepillo
+
+ctrl->listarProductos("Thiago");
+ctrl->crearPromocion("Promo Thiago", "Jeans + Microondas", Date(1, 10, 2025), 15);
+ctrl->seleccionarProducto(4, 1);  // Jeans
+ctrl->seleccionarProducto(5, 1);  // Microondas
+
+// Realizar compras
+ctrl->crearCompra("Luciano");
+ctrl->agregarProducto(1, 2); // Camisa
+ctrl->agregarProducto(3, 5); // Cepillo
+ctrl->confirmarYMostrarCompra();
+
+ctrl->crearCompra("Pepe");
+ctrl->agregarProducto(2, 1); // Heladera
+ctrl->agregarProducto(6, 10); // Manzana
+ctrl->confirmarYMostrarCompra();
+
+ctrl->crearCompra("Luciano");
+ctrl->agregarProducto(4, 2); // Jeans
+ctrl->agregarProducto(5, 1); // Microondas
+ctrl->confirmarYMostrarCompra();
+
+ctrl->crearCompra("Pepe");
+ctrl->agregarProducto(1, 1); // Camisa
+ctrl->agregarProducto(4, 1); // Jeans
+ctrl->confirmarYMostrarCompra();
+
+// Comentarios
+ctrl->seleccionarUsuario("Luciano");
+ctrl->seleccionarProducto(1); // Camisa
+ctrl->realizarComentario("Muy buena calidad");
+
+ctrl->seleccionarUsuario("Pepe");
+ctrl->seleccionarProducto(1); // Camisa
+ctrl->realizarComentario("Color distinto al esperado");
+
+ctrl->seleccionarUsuario("Ignacio");
+ctrl->seleccionarProducto(1);
+ctrl->realizarComentario("Gracias por el feedback");
+
+// Responder comentarios
+ctrl->seleccionarUsuario("Thiago");
+ctrl->responderComentario(1, "¡Gracias por tu compra!");
+
+ctrl->seleccionarUsuario("Luciano");
+ctrl->responderComentario(2, "A mí me llegó como la imagen");
+
+ctrl->seleccionarUsuario("Ignacio");
+ctrl->responderComentario(3, "¡A la orden!");
+
+ctrl->seleccionarUsuario("Pepe");
+ctrl->responderComentario(1, "Sí, está genial");
+
+// Prueba de comentarios anidados (respuesta a respuesta)
+ctrl->seleccionarUsuario("Luciano");
+ctrl->responderComentario(4, "Coincido contigo");
+
+cout << "\nDatos de prueba cargados.\n";
 }

@@ -35,7 +35,6 @@ void Producto::agregarComentario(Comentario* &comen) const {
     int idComen= comen->getID();
     IKey* key = new Integer(idComen);
     Comentarios->add(key , comen);
-    delete key;
 }
 
 void Producto::eliminarComentario(Comentario* const &comen) const {

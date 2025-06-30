@@ -19,53 +19,53 @@ void Controlador::agregarProducto(int codProd, int cantidad) {
     delete key;
 }
 
-void Controlador::altaCliente(string Nickname, string Contraseña,
-Date FNacimiento, DataDirec Direccion, string Ciudad) {
+void Controlador::altaCliente(string Nickname, string contraseña,
+Date fNacimiento, DataDirec direccion, string ciudad) {
     IKey* key = new String(Nickname.c_str());
     if (usuarios->member(key)) {
-        cout << "\n[ERROR] Ya existe un usuario con ese nickname.\n";
+        cout << "\nYa existe un usuario con ese nickname.\n";
         delete key;
         return;
-    } if (Contraseña.length() < 6) {
-        cout << "\n[ERROR] La contraseña debe ser de al menos 6 caracteres.\n";
+    } if (contraseña.length() < 6) {
+        cout << "\nLa contraseña debe ser de al menos 6 caracteres.\n";
         delete key;
         return;
     }
-    usuarios->add(key, new Cliente(Nickname, Contraseña, FNacimiento, Direccion, Ciudad));
-    cout << "[OK] Cliente registrado correctamente.\n";
+    usuarios->add(key, new Cliente(Nickname, contraseña, fNacimiento, direccion, ciudad));
+    cout << "Cliente registrado correctamente.\n";
 }
 
-void Controlador::altaVendedor(string Nickname, string Contraseña,
-Date FNacimiento, string RUT) {
-    IKey* clave = new String(RUT.c_str());
-    if (usuarios->member(clave)) {
-        cout << "\n[ERROR] Ya existe un usuario con ese RUT.\n";
-        delete clave;
+void Controlador::altaVendedor(string nickname, string contraseña,
+Date fNacimiento, string rut) {
+    IKey* key = new String(rut.c_str());
+    if (usuarios->member(key)) {
+        cout << "\nYa existe un usuario con ese RUT.\n";
+        delete key;
         return;
-    } if (Contraseña.length() < 6) {
-        cout << "\n[ERROR] La contraseña debe ser de al menos 6 caracteres.\n";
-        delete clave;
+    } if (contraseña.length() < 6) {
+        cout << "\nLa contraseña debe ser de al menos 6 caracteres.\n";
+        delete key;
         return;
-    } if (RUT.length() != 12) {
-        cout << "\n[ERROR] El RUT debe ser de 12 caracteres.\n";
-        delete clave;
+    } if (rut.length() != 12) {
+        cout << "\nEl RUT debe ser de 12 caracteres.\n";
+        delete key;
         return;
     }
-    clave = new String(Nickname.c_str());
-    usuarios->add(clave, new Vendedor(Nickname, Contraseña, FNacimiento, RUT));
-    cout << "[OK] Vendedor registrado correctamente.\n";
+    key = new String(nickname.c_str());
+    usuarios->add(key, new Vendedor(nickname, contraseña, fNacimiento, rut));
+    cout << "Vendedor registrado correctamente.\n";
 }
 
-void Controlador::altaProducto(string Nombre, float Precio, int Stock,
-string Descripcion, Cat Categoria, string NicknameVendedor) {
-    IKey* key = new String(NicknameVendedor.c_str());
+void Controlador::altaProducto(string nombre, float precio, int stock,
+string descripcion, Cat categoria, string nicknameVendedor) {
+    IKey* key = new String(nicknameVendedor.c_str());
     auto* vendedor = dynamic_cast<Vendedor*>(usuarios->find(key));
     if (vendedor == nullptr) {
         cout << "\nVendedor no existe o no es válido.";
         return;
     }
 
-    auto* prod = new Producto(Nombre, Precio, Stock, Descripcion, Categoria, vendedor);
+    auto* prod = new Producto(nombre, precio, stock, descripcion, categoria, vendedor);
     key = new Integer(prod->getCodProd());
     productos->add(key, prod);
     vendedor->agregarProducto(prod);
@@ -119,8 +119,8 @@ void Controlador::crearCompra(string nick) {
     compraActual = clienteActual->crearCompra();
 }
 
-void Controlador::crearPromocion(string Nombre, string Descripcion,
-Date FVencimiento, int Descuento) {
+void Controlador::crearPromocion(string nombre, string descripcion,
+Date fVencimiento, int descuento) {
     string NicknameVendedor = vendedorActual->getNickname();
     IKey* key = new String(NicknameVendedor.c_str());
 
@@ -130,8 +130,8 @@ Date FVencimiento, int Descuento) {
         return;
     }
     delete key;
-    Promocion* promo = vendedorActual->crearPromocion(Nombre, Descripcion, FVencimiento, Descuento);
-    key = new String(Nombre.c_str());
+    Promocion* promo = vendedorActual->crearPromocion(nombre, descripcion, fVencimiento, descuento);
+    key = new String(nombre.c_str());
     promociones->add(key, promo);
     promocionActual = promo;
     cout << "Promoción creada correctamente.\n";
@@ -250,8 +250,8 @@ void Controlador::listarProductos() {
     }
 }
 
-void Controlador::listarProductos(string NicknameVendedor) {
-    IKey* key = new String(NicknameVendedor.c_str());
+void Controlador::listarProductos(string nicknameVendedor) {
+    IKey* key = new String(nicknameVendedor.c_str());
     auto* vendedor = dynamic_cast<Vendedor*>(usuarios->find(key));
     delete key;
     IDictionary* Productos = vendedor->getProductos();
@@ -263,8 +263,8 @@ void Controlador::listarProductos(string NicknameVendedor) {
     vendedorActual = vendedor;
 }
 
-void Controlador::listarProductosPendiente(string NicknameVendedor) {
-    IKey* key = new String(NicknameVendedor.c_str());
+void Controlador::listarProductosPendiente(string nicknameVendedor) {
+    IKey* key = new String(nicknameVendedor.c_str());
     auto* vendedor = dynamic_cast<Vendedor*>(usuarios->find(key));
     delete key;
     if (vendedor != nullptr) {
@@ -301,8 +301,8 @@ void Controlador::listarPromosVigentes() {
     }
 }
 
-void Controlador::marcarProducto(string nickCliente, Date fechaCompra) {
-    IKey* key = new String(nickCliente.c_str());
+void Controlador::marcarProducto(string nicknameCliente, Date fechaCompra) {
+    IKey* key = new String(nicknameCliente.c_str());
     auto* cli = dynamic_cast<Cliente*>(usuarios->find(key));
     delete key;
 
