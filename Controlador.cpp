@@ -82,7 +82,6 @@ void Controlador::confirmarYMostrarCompra() {
     for (IIterator* it = compra->getIterator(); it->hasCurrent(); it->next()) {
         auto* pp = dynamic_cast<ProductoCompras*>(it->getCurrent());
         prod = pp->getProducto();
-        cout << prod->getCodProd() << endl;
         montoFinal += prod->getPrecio() * pp->getCantidad();
     }
     cout << "\nDetalles de la compra: " << endl;
@@ -100,8 +99,16 @@ void Controlador::confirmarYMostrarCompra() {
         }
     }
     cout << "Confirmar compra? (S/N)"; cin >> op1; cin.ignore();
-    if (op1 == 'S' || op1 == 's') clienteActual->agregarCompra(compraActual);
-        else cout << "Compra cancelada";
+    if (op1 == 'S' || op1 == 's') {
+        clienteActual->agregarCompra(compraActual);
+        for (IIterator* it = compra->getIterator(); it->hasCurrent(); it->next()) {
+            auto* pp = dynamic_cast<ProductoCompras*>(it->getCurrent());
+            if (prod != nullptr) {
+                auto* prod1 = pp->getProducto();
+                prod1->agregarProdCompra(pp);
+            }
+        }
+    } else cout << "Compra cancelada";
 }
 
 void Controlador::crearCompra(string nick) {
@@ -167,6 +174,34 @@ void Controlador::listarComentarios(string nick) {
     usuarioActual = us;
 }
 
+void Controlador::listarCompras(int codProd) {
+    for (IIterator* it = usuarios->getIterator(); it->hasCurrent(); it->next()) {
+        auto* cli = dynamic_cast<Cliente*>(it->getCurrent());
+        if (cli != nullptr) {
+            auto* comprasCliente = cli->getCompras();
+            for (IIterator* itComp = comprasCliente->getIterator(); itComp->hasCurrent(); itComp->next()) {
+                auto* compra = dynamic_cast<Compras*>(itComp->getCurrent());
+                if (compra != nullptr) {
+                    auto* productosCompra = compra->getProductoCompras();
+                    for (IIterator* itProd = productosCompra->getIterator(); itProd->hasCurrent(); itProd->next()) {
+                        auto* prodComp = dynamic_cast<ProductoCompras*>(itProd->getCurrent());
+                        bool enviado = prodComp->getEnviado();
+                        if (!enviado) {
+                            if (prodComp->getProducto()->getCodProd() == codProd) {
+                                cout << "Nickname del cliente: " << cli->getNickname() << endl;
+                                cout << "Fecha de compra: " << compra->getFCompra().toString() << endl << endl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    IKey* key = new Integer(codProd);
+    auto* prod = dynamic_cast<Producto*>(productos->find(key));
+    productoActual = prod;
+}
+
 void Controlador::listarUsuarios() {
     for (IIterator* it = usuarios->getIterator();it->hasCurrent();it->next()) {
         auto* u = dynamic_cast<Usuario*>(it->getCurrent());
@@ -198,7 +233,7 @@ void Controlador::listarNickClientes() {
     }
 }
 
-void Controlador::listarVendedores() {
+void Controlador::listarNickVendedores() {
 
     for (IIterator* it = usuarios->getIterator(); it->hasCurrent(); it->next()) {
         auto* u = dynamic_cast<Usuario*>(it->getCurrent());
@@ -227,6 +262,30 @@ void Controlador::listarProductos(string NicknameVendedor) {
     vendedorActual = vendedor;
 }
 
+void Controlador::listarProductosPendiente(string NicknameVendedor) {
+    IKey* key = new String(NicknameVendedor.c_str());
+    auto* vendedor = dynamic_cast<Vendedor*>(usuarios->find(key));
+    delete key;
+    if (vendedor != nullptr) {
+        ProductoCompras* pp = nullptr;
+        IDictionary* Productos = vendedor->getProductos();
+        for (IIterator* it = Productos->getIterator(); it->hasCurrent(); it->next()) {
+            auto* prod = dynamic_cast<Producto*>(it->getCurrent());
+            if (prod != nullptr) {
+                pp = prod->getProdComp();
+                cout << "Productos: " << endl << endl;
+                if (pp != nullptr) {
+                    bool enviado = pp->getEnviado();
+                    if (!enviado) {
+                        cout << "Código: " << prod->getCodProd() << endl;
+                        cout << "Nombre: " << prod->getNombre() << endl << endl;
+                    }
+                }
+            }
+        }
+    }
+}
+
 void Controlador::listarPromosVigentes() {
     Date const hoy = Date::obtenerFechaActual();
 
@@ -239,6 +298,87 @@ void Controlador::listarPromosVigentes() {
             cout << "Fecha de vencimiento: " << p->getFVencimiento().toString() << endl << endl;
         }
     }
+}
+
+void Controlador::marcarProducto(string nickCliente, Date fechaCompra) {
+    IKey* key = new String(nickCliente.c_str());
+    auto* cli = dynamic_cast<Cliente*>(usuarios->find(key));
+    delete key;
+
+    if (cli != nullptr) {
+        auto* comprasCliente = cli->getCompras();
+        for (IIterator* itCompra = comprasCliente->getIterator(); itCompra->hasCurrent(); itCompra->next()) {
+            auto* compra = dynamic_cast<Compras*>(itCompra->getCurrent());
+            if (compra != nullptr) {
+                if (compra->getFCompra().fechaEsMayorIgual(fechaCompra)) {
+                    auto* productosCompra = compra->getProductoCompras();
+                    for (IIterator* itPC = productosCompra->getIterator(); itPC->hasCurrent(); itPC->next()) {
+                        auto* prodComp = dynamic_cast<ProductoCompras*>(itPC->getCurrent());
+                        if (prodComp != nullptr){
+
+                            auto* prod = prodComp->getProducto();
+                            if (prod && prod->getCodProd() == productoActual->getCodProd() && !prodComp->getEnviado()) {
+                                prodComp->enviarProducto();
+                                cout << "Producto marcado como enviado." << endl;
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    cout << "No se encontró el producto o ya fue enviado." << endl;
+}
+
+void Controlador::mostrarDatosUsuario(string nick) {
+    int z = 1;
+    IKey* key = new String(nick.c_str());
+    if (!usuarios->member(key)) {
+        delete key;
+        cout << "Usuario no encontrado." << endl;
+        return;
+    }
+    auto* us = dynamic_cast<Usuario*>(usuarios->find(key));
+    cout << "Nickname: " << us->getNickname() << endl;
+    cout << "Nacimiento: " << us->getNacimiento().toString() << endl;
+
+    auto vend = dynamic_cast<Vendedor*>(us);
+    if (vend != nullptr) {
+        auto* prod = vend->getProductos();
+        auto* promo = vend->getPromociones();
+        cout << "\nProductos: " << endl;
+        for (IIterator* it = prod->getIterator(); it->hasCurrent(); it->next()) {
+            auto* producto = dynamic_cast<Producto*>(it->getCurrent());
+            if (producto != nullptr) cout << "Nombre: " << producto->getNombre() << endl;
+        }
+        cout << "\nPromociones: " << endl;
+        for (IIterator* it = promo->getIterator(); it->hasCurrent(); it->next()) {
+            auto* promo = dynamic_cast<Promocion*>(it->getCurrent());
+            if (promo != nullptr) cout << "Nombre: " << promo->getNombre() << endl;
+        }
+    }
+    auto c = dynamic_cast<Cliente*>(us);
+    if (c != nullptr) {
+        ICollection* comp = c->getCompras();
+        for (IIterator* it = comp->getIterator(); it->hasCurrent(); it->next()) {
+            auto* compra = dynamic_cast<Compras*>(it->getCurrent());
+            ICollection* prodCom = compra->getProductoCompras();
+            cout << "\nCompra"<<z<<": " << endl;
+            for (IIterator* it = prodCom->getIterator(); it->hasCurrent(); it->next()) {
+                auto* prodCompra = dynamic_cast<ProductoCompras*>(it->getCurrent());
+                Producto* prod = prodCompra->getProducto();
+                cout << "\nProductos: " << endl;
+                cout << "Nombre: "<< prod->getNombre() << endl;
+                cout << "Descripcion: "<< prod->getDescripcion() << endl;
+                cout << "Precio: "<< prod->getPrecio() << endl;
+                cout << "Stock: "<< prod->getStock() << endl;
+                cout << "Categoría: "<< prod->getCategoria() << endl;
+            }
+            z++;
+        }
+    }
+    delete key;
 }
 
 void Controlador::mostrarDatosProducto(int CodProd) {

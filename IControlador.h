@@ -29,7 +29,7 @@ public:
     virtual void altaVendedor(string Nombre, string Contraseña,
     Date FNacimiento, string RUT) = 0;
     virtual void listarUsuarios() = 0;
-    virtual void listarVendedores() = 0;
+    virtual void listarNickVendedores() = 0;
     virtual void listarNickUsuarios() = 0;
     virtual void listarComentarios() = 0;
     virtual void listarComentarios(string nick) = 0;
@@ -38,5 +38,9 @@ public:
     virtual void agregarProducto(int codProd, int cantidad) = 0;
     virtual void confirmarYMostrarCompra() = 0;
     virtual void crearCompra(string nick) = 0;
+    virtual void mostrarDatosUsuario(string nick) = 0;
+    virtual void listarProductosPendiente(string NicknameVendedor) = 0;
+    virtual void listarCompras(int codProd) = 0;
+    virtual void marcarProducto(string nickCliente, Date fechaCompra) = 0;
 };
 #endif

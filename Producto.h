@@ -6,6 +6,7 @@
 #include "Estructuras.h"
 #include <string>
 
+class ProductoCompras;
 class Comentario;
 class Usuario;
 class Vendedor;
@@ -27,8 +28,10 @@ public:
     Cat getCategoria() const;
     Vendedor* getVendedor() const;
     IDictionary* getComentarios() const;
+    ProductoCompras* getProdComp() const;
     void agregarComentario(Comentario* comen) const;
     void eliminarComentario(Comentario* comen) const;
+    void agregarProdCompra(ProductoCompras* prodComp);
 private:
     static int ultimoCodProd;
 	int CodProd;
@@ -37,6 +40,7 @@ private:
     string Nombre;
     string Descripcion;
     Cat Categoria;
+    ProductoCompras* prodComp;
     IDictionary* Comentarios;
     Vendedor* vendedor;
 };

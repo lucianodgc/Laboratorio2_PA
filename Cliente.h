@@ -19,6 +19,7 @@ public:
     string getCiudad();
     Compras* crearCompra() const;
     void agregarCompra(Compras *comp) const;
+    ICollection* getCompras() const;
 private:
 	DataDirec Direccion;
     string Ciudad;

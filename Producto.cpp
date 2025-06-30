@@ -7,7 +7,7 @@ int Producto::ultimoCodProd = 0;
 
 Producto::Producto(string const &Nombre, float Precio, int stock, string const &Descripcion,
 Cat Categoria, Vendedor* vendedor) : CodProd(++ultimoCodProd), Stock(stock), Precio(Precio), Nombre(Nombre),
-Descripcion(Descripcion), Categoria(Categoria), vendedor(vendedor) {Comentarios = new OrderedDictionary();}
+Descripcion(Descripcion), Categoria(Categoria), prodComp(nullptr), vendedor(vendedor) {Comentarios = new OrderedDictionary();}
 
 Producto::~Producto() = default;
 
@@ -26,6 +26,10 @@ Cat Producto::getCategoria() const {return Categoria;}
 Vendedor* Producto::getVendedor() const {return vendedor;}
 
 IDictionary* Producto::getComentarios() const {return Comentarios;}
+
+ProductoCompras* Producto::getProdComp() const {return prodComp;}
+
+void Producto::agregarProdCompra(ProductoCompras* prodComp) {this->prodComp = prodComp;}
 
 void Producto::agregarComentario(Comentario* comen) const {
     int idComen= comen->getID();

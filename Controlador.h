@@ -23,8 +23,8 @@ public:
     void altaVendedor(string Nombre, string Contraseña,
     Date FNacimiento, string RUT) override;
     void listarUsuarios() override;
-    void listarVendedores() override;
-
+    void listarNickVendedores() override;
+    void listarProductosPendiente(string NicknameVendedor);
     void crearPromocion(string Nombre, string Descripcion, Date FVencimiento, int Descuento) override;
     void listarPromosVigentes() override;
     void verInfoPromo(string nombre) override;
@@ -36,7 +36,7 @@ public:
     void listarProductos(string NicknameVendedor) override;
     void mostrarDatosProducto(int CodProd) override;
     void listarNickUsuarios() override;
-
+    void listarCompras(int codProd) override;
 
     void realizarComentario(string Texto) override;
     void responderComentario(int ID, string Texto) override;
@@ -51,8 +51,9 @@ public:
     void listarNickClientes() override;
     void agregarProducto(int codProd, int cantidad) override;
     void confirmarYMostrarCompra() override;
-
+    void mostrarDatosUsuario(string nick) override;
     void crearCompra(string nick) override;
+    void marcarProducto(string nickCliente, Date fechaCompra) override;
 
 private:
     IDictionary* usuarios;

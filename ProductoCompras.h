@@ -16,6 +16,7 @@ public:
     int getCantidad() const;
     bool getEnviado() const;
     Producto* getProducto() const;
+    void enviarProducto();
 private:
 	int Cantidad;
     bool Enviado;

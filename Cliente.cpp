@@ -11,6 +11,8 @@ DataDirec Cliente::getDireccion() {return Direccion;}
 
 string Cliente::getCiudad() {return Ciudad;}
 
+ICollection* Cliente::getCompras() const {return compras;}
+
 Compras* Cliente::crearCompra() const {
     auto* comp = new Compras(0, Date());
     return comp;

@@ -21,6 +21,7 @@ public:
     IDictionary* getProductos() const;
     void agregarPromocion(Promocion* promo) const;
     Promocion* crearPromocion(string const &nombre, string const &descripcion, Date const &fechaVencimiento, int descuento) const;
+    IDictionary* getPromociones() const;
 private:
     string RUT;
     IDictionary *Productos;

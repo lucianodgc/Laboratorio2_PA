@@ -20,6 +20,8 @@ void Vendedor::agregarProducto(Producto* p) const {
 
 IDictionary* Vendedor::getProductos() const {return Productos;}
 
+IDictionary* Vendedor::getPromociones() const {return Promociones;}
+
 void Vendedor::agregarPromocion(Promocion* promo) const {
     IKey* key = new String(promo->getNombre().c_str());
     Promociones->add(key, promo);
